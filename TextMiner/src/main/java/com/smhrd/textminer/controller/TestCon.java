@@ -41,13 +41,13 @@ public class TestCon {
 	}
 	
 	
-	 @RequestMapping("/sample.bgn")
+	 @RequestMapping("/login")
 	 public String sampleView(Model model) {
 		 String a = TestMapper.selectSampleData();
 		 dto.setTest(a);
 		 model.addAttribute("sample",dto);
 		 System.out.println(a);
-		 return "sample";
+		 return "login";
 	 }
 	 
 	
