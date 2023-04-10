@@ -9,7 +9,7 @@
 <body>
 <h3>메인페이지</h3>
 
-<form action="/login" method="post">
+<form action="/siginin" method="post">
 	<button onclick = "submit">로그인으로?</button>
 </form>
 </body>

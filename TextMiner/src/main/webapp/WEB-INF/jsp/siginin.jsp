@@ -19,35 +19,35 @@
         <div class="loginPage">
             <div class="loginWrap">
                 <div class="leftWrap">
-                    <form action="#" method="post">
+                    <form action="/main" method="post" class="join_form">
                         <a href="main.html">
                             <h1>match-up</h1>
                         </a>
                         <h2>Sign in</h2>
                         <ul class="top">
-                            <li><input type="text" placeholder="아이디를 입력해주세요" name="id" required maxlength="30"></li>
-                            <li><input type="password" placeholder="비밀번호를 입력해주세요" name="pw" required maxlength="30">
+                            <li><input type="text" placeholder="아이디를 입력해주세요" name="mb_id" required maxlength="30"></li>
+                            <li><input type="password" placeholder="비밀번호를 입력해주세요" name="mb_pw" required maxlength="30">
                             </li>
-                            <li><input type="text" placeholder="이름을 입력해주세요" name="email" required maxlength="30"></li>
-                            <li><input type="text" placeholder="E-mail을 입력해주세요" name="email" required maxlength="30">
+                            <li><input type="text" placeholder="이름을 입력해주세요" name="mb_name" required maxlength="30"></li>
+                            <li><input type="text" placeholder="E-mail을 입력해주세요" name="mb_email" required maxlength="30">
                             </li>
-                            <li><input type="text" placeholder="기업 명 을 입력해주세요" name="email" required maxlength="30">
+                            <li><input type="text" placeholder="기업 명 을 입력해주세요" name="mb_co" required maxlength="30">
                             </li>
-                            <li><input type="text" placeholder="전화번호를 입력해주세요" name="email" required maxlength="30"></li>
+                            <li><input type="text" placeholder="전화번호를 입력해주세요" name="mb_call" required maxlength="30"></li>
                             <li>
                                 <p>원하는 해시태그를 등록해 보세요</p>
                             </li>
                             <li><button type="button" id="keyword-button">해시태그 등록</button></li>
                             <li><input type="submit" value="SIGN IN"></li>
                         </ul>
-                        <hr>
+                        <hr class="hr">
                         <p>이미 회원이신가요? <a href="login.html"> 로그인 하기</a></p>
                     </form>
                 </div><!--leftWrap-->
                 <div id="keyword-modal" class="modal">
                     <div class="modal-content">
                         <h2>관심 해시태그 선택</h2>
-                        <form id="keyword-form">
+                        <form id="keyword-form">  <!--여기가 바로 폼테그 시작-->
                             <div class="keywordformWrap">
                                 <p>분야별 해시태그</p>
                                 <div class="keywordform1">
