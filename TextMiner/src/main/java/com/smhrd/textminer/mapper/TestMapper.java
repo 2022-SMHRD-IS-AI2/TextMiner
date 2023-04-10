@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Component
 public interface TestMapper {
  
-    @Select("select disposable_string from disposable_table")
+    @Select("select test from test")
     String selectSampleData(); 
     
 }
