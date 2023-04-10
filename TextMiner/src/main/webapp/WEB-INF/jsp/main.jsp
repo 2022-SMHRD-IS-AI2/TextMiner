@@ -9,8 +9,8 @@
 <body>
 <h3>메인페이지</h3>
 
-<form action="/sample.bgn" method="post">
-	<button onclick = "submit">버튼입니다.</button>
+<form action="/login" method="post">
+	<button onclick = "submit">로그인으로?</button>
 </form>
 </body>
 </html>
