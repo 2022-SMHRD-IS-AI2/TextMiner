@@ -12,4 +12,7 @@ public interface TestMapper {
     @Select("select test from test")
     String selectSampleData(); 
     
+    
+    
+    
 }
