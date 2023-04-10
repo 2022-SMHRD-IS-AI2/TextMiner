@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @SpringBootApplication//(scanBasePackages = "com.example.test.mapper")
 @Configuration
-//@MapperScan("com.example.test.mapper")
+@MapperScan("com.smhrd.textminer.mapper")
 public class TextMinerApplication {
 
 	public static void main(String[] args) {
