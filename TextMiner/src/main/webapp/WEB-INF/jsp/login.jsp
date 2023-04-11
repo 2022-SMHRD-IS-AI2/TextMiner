@@ -15,8 +15,8 @@
         <div class="loginPage">
             <div class="loginWrap">
                 <div class="leftWrap">
-                    <form action="#" method="post">
-                        <a href="/main"><h1>match-up</h1></a>
+                    <form action="LoginCon" method="post">
+                        <a href="/"><h1>match-up</h1></a>
                         <h2>Login</h2>
                         <ul class="top">
                             <li><input type="text" placeholder="아이디를 입력해주세요" name="id" required maxlength="30"></li>
