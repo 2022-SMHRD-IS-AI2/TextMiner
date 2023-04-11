@@ -28,7 +28,7 @@ public class UrlMappingCon {
 	
 	@Autowired TestMapper TestMapper;
 	
-	@GetMapping("/main")
+	@GetMapping("/")
 	public String root() {
 		System.out.println("메인페이지 출력");
 		return "main";
