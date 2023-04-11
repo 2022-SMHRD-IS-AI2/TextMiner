@@ -35,20 +35,43 @@ public class UrlMappingCon {
 	}
 	
 	 @GetMapping("/signin")
-	public String joinView() {
-		System.out.println("되나?");
+	public String signView() {
+		System.out.println("회원가입페이지 출력");
 		return "signin";
 	}
 	
 	
 	 @RequestMapping("/login")
-	 public String sampleView() {
-		 //String a = TestMapper.selectSampleData();
-		 // dto.setTest(a);
-		 //model.addAttribute("sample",dto);
-		 //System.out.println(a);
-		 return "login";
-	 }
+	 public String loginView() {
+			System.out.println("로그인 페이지 출력");
+			return "login";
+		}
+//	 public String loginView() {
+//		 String a = TestMapper.selectSampleData();
+//		 // dto.setTest(a);
+//		 //model.addAttribute("sample",dto);
+//		 System.out.println(a);	
+//		 return "login";
+//		 
+//		 
+//	 }
+	 @GetMapping("/board")
+		public String boardView() {
+			System.out.println("모집공고 페이지 출력");
+			return "board";
+		}
+	 @GetMapping("/conts")
+		public String contsView() {
+			System.out.println("세부내역페이지 출력");
+			return "conts";
+		}
+	 
+	 @GetMapping("/mypage")
+		public String mypageView() {
+			System.out.println("마이페이지 출력");
+			return "mypage";
+		}
+	 
 	 
 	
 	 
