@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
     margin:0px;
     padding:0px;
@@ -8,43 +7,24 @@
     font-family:"Roboto",sans-serif;
     background:#f5f5f5;
   }
-  /* .container {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-  }
-  .container h2 {
-    font-size:25px;
-    color:#888;
-    text-align:center;
-  }
-  .container .list {
-    margin-top:40px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    max-width:650px;
-  } */
-
+ 
   .modal-content h2{
-    font-size:25px;
+    font-size:1.25rem;
     color:#555;
-    margin : 10px 0 0 18px;
-    padding: 10px;
+    margin : .5rem 0 0 .9rem;
+    padding: .5rem;
   }
 
   .keywordformWrap{display: block;}
-  .keywordformWrap p{ margin: 35px 0 0 35px;}
+  .keywordformWrap p{ margin: 1.75rem 0 0 1.75rem;}
 
-  .keywordform1{display: inline-flex; margin:15px 30px 30px 30px;} 
-  .keywordform2{display: inline-flex; margin:15px 30px 30px 30px;} 
-  .keywordform3{display: inline-flex; margin:-15px 30px 30px 30px;} 
-  .keywordform4{display: inline-flex; margin:-15px 30px 30px 30px;} 
+  .keywordform1{display: inline-flex; margin:.75rem 1.5rem 1.5rem 1.5rem;} 
+  .keywordform2{display: inline-flex; margin:.75rem 1.5rem 1.5rem 1.5rem;} 
+  .keywordform3{display: inline-flex; margin:-.75rem 1.5rem 1.5rem 1.5rem;} 
+  .keywordform4{display: inline-flex; margin:-.75rem 1.5rem 1.5rem 1.5rem;} 
   .form-element {
     position:relative;
-    width:100px;
+    width:5rem;
     margin:0.2rem;
 
   }
@@ -53,7 +33,7 @@
   }
   .form-element label {
     width:100%;
-    height: 60px;
+    height: 3rem;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -66,29 +46,29 @@
     border-radius:5px;
   }
   .form-element .icon {
-    margin-top:10px;
-    font-size:30px;
+    margin-top:.5rem;
+    font-size:1.5rem;
     color:#555;
     transition:all 200ms ease-in-out;
   }
   .form-element .title {
-    font-size:15px;
+    font-size:0.75rem;
     color:#555;
-    padding:5px 0px;
+    padding:0.25rem 0px;
     transition:all 200ms ease-in-out;
   }
   .form-element label:before {
     content:"✓";
     position:absolute;
-    width:14px;
-    height:14px;
-    top:8px;
-    left:8px;
+    width:.7rem;
+    height:.7rem;
+    top:.4rem;
+    left:.4rem;
     background:#0d0df1;
     color:#fff;
     text-align:center;
-    line-height:14px;
-    font-size:8px;
+    line-height:.7rem;
+    font-size:.4rem;
     font-weight:600;
     border-radius:50%;
     opacity:0;
@@ -112,16 +92,16 @@
 
   /* 해시태그 선택완료 버튼 스타일 */
   .confirm{
-    margin: 45px 0 30px 543px;
-    padding: 10px;
-    width: 120px;
+    margin: 2.25rem 0 1.5rem 27.15rem;
+    padding: .5rem;
+    width: 6rem;
     background-color: #3e73e6;
     border: none;
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
     display: block;
-    font-size: 16px;
+    font-size: .8rem;
 }
 .confirm:hover {background-color: #1b2affd3; cursor: pointer;}  
 

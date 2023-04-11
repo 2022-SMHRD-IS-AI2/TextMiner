@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');
 
+/* General styling */
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -10,6 +11,7 @@
     text-decoration: none;
   }
   html{font-size: 20px;}
+  
   .pageWrap{
     background: url("../image/login_back_50.png") no-repeat;
   
@@ -26,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     width: 40rem;
-    height: 35rem;
+    height: 25rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -102,7 +104,7 @@
     display: block;
     margin-bottom: 1rem;
     padding: .5rem;
-    width: 14rem;;
+    width: 14rem;
   }
   input[type="submit"] {
     background-color: #3e73e6;
@@ -119,26 +121,6 @@
     background-color: #1b2affd3;
     cursor: pointer;
   }  
-
-  /* 관심 키워드 선택 버튼 스타일 */
-#keyword-button {
-  padding: 0.25rem .5rem;
-  margin-top:-.5rem;
-  background-color: #3e73e6;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-size:0.75rem;
-  padding: .5rem;
-  width: 14rem;
-}
-#keyword-button:hover {
-  background-color: #1b2affd3;
-  cursor: pointer;
-}  
-
 
   /* 아이디저장 글씨 설정 */
   /* #id_save {
@@ -164,9 +146,9 @@
   } */
   p {
     color: #999;
-    font-size: .8rem;
+    font-size: .75rem;
     text-align: left;
-    margin-top: .5rem;  
+    margin-top: .75rem  
 }
   
   p a {
@@ -183,11 +165,10 @@
   .rightWrap {
     flex-basis: 50%;
     height: 100%;
-    /* background: url("../image/signin_back.png") no-repeat; */
+     background: url("../image/login_bg.png") no-repeat center; 
   }
 
-  .right_img {
-    margin-top: 10.5rem;
-    margin-left:-1rem;
-  }  
+  .rightWrap .img{
+    align-items: center;
+  }
   
