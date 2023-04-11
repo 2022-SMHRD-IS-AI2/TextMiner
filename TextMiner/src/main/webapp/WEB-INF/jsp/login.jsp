@@ -16,7 +16,7 @@
             <div class="loginWrap">
                 <div class="leftWrap">
                     <form action="#" method="post">
-                        <a href="main.html"><h1>match-up</h1></a>
+                        <a href="/main"><h1>match-up</h1></a>
                         <h2>Login</h2>
                         <ul class="top">
                             <li><input type="text" placeholder="아이디를 입력해주세요" name="id" required maxlength="30"></li>
@@ -28,7 +28,7 @@
                             </li>
                         </ul>
                         <hr class="hr">
-                        <p>아이디가 없으신가요? <a href="/siginin"> 회원가입 하기</a></p>
+                        <p>아이디가 없으신가요? <a href="/signin"> 회원가입 하기</a></p>
 
                     </form>
 
