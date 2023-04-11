@@ -24,7 +24,7 @@ import com.smhrd.textminer.mapper.JoinMapper;
 
 @Controller
 
-public class JoinCon {
+public class SigninCon {
 
 	// HttpServletRequest service;
 
