@@ -18,15 +18,12 @@ import com.smhrd.textminer.mapper.TestMapper;
 
 
 @Controller
-
-
-
 public class UrlMappingCon {
 	
-	TestDTO dto = new TestDTO(null); 
+	TestDTO dto = new TestDTO(null);
 	
 	
-	@Autowired TestMapper TestMapper;
+	//@Autowired TestMapper TestMapper;
 	
 	@GetMapping("/")
 	public String root() {
@@ -34,7 +31,7 @@ public class UrlMappingCon {
 		return "main";
 	}
 	
-	 @GetMapping("/signin")
+	@GetMapping("/signin")
 	public String joinView() {
 		System.out.println("되나?");
 		return "signin";
