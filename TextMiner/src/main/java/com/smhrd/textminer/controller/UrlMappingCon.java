@@ -34,19 +34,19 @@ public class UrlMappingCon {
 		return "main";
 	}
 	
-	 @GetMapping("/siginin")
+	 @GetMapping("/signin")
 	public String joinView() {
 		System.out.println("되나?");
-		return "siginin";
+		return "signin";
 	}
 	
 	
 	 @RequestMapping("/login")
 	 public String sampleView() {
-		 String a = TestMapper.selectSampleData();
+		 //String a = TestMapper.selectSampleData();
 		 // dto.setTest(a);
 		 //model.addAttribute("sample",dto);
-		 System.out.println(a);
+		 //System.out.println(a);
 		 return "login";
 	 }
 	 
