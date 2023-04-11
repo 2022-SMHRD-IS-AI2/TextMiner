@@ -18,10 +18,10 @@
             <div class="headerConts">
                 <div class="header_right">
                     <ul class="item">
-                        <li><a href="board.html">지원사업 공고</a></li>
-                        <li><a href="login.html">LOG IN</a></li>
-                        <li><a href="siginin.html">SIGN IN</a></li>
-                        <li><a href="mypage.html">MY PAGE</a></li>
+                        <li><a href="board.jsp">지원사업 공고</a></li>
+                        <li><a href="login.jsp">LOG IN</a></li>
+                        <li><a href="siginin.jsp">SIGN IN</a></li>
+                        <li><a href="mypage.jsp">MY PAGE</a></li>
                     </ul>
                 </div>
             </div><!-- headerConts -->
@@ -30,7 +30,7 @@
             <div class="main">
                 <div class="maintopWrap">
                     <div class="main_left">
-                        <a href="main.html"><img src="../image/logo.png" /></a>
+                        <a href="main.jsp"><img src="image/logo.png" /></a>
                         <p class="ment1">지원사업 공고 매칭 사이트</p>
                         <p class="ment2">나에게 맞는 지원사업 공고를 검색해 보세요!</p>
                         <form action="#">
