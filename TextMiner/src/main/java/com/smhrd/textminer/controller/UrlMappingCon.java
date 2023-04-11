@@ -21,7 +21,7 @@ import com.smhrd.textminer.mapper.TestMapper;
 
 
 
-public class TestCon {
+public class UrlMappingCon {
 	
 	TestDTO dto = new TestDTO(null); 
 	
@@ -34,21 +34,23 @@ public class TestCon {
 		return "main";
 	}
 	
-	@GetMapping("/what")
-	public String sec() {
-		System.out.println("다음");
-		return "dbtest";
+	 @GetMapping("/siginin")
+	public String joinView() {
+		System.out.println("되나?");
+		return "siginin";
 	}
 	
 	
 	 @RequestMapping("/login")
-	 public String sampleView(Model model) {
+	 public String sampleView() {
 		 String a = TestMapper.selectSampleData();
-		 dto.setTest(a);
-		 model.addAttribute("sample",dto);
+		 // dto.setTest(a);
+		 //model.addAttribute("sample",dto);
 		 System.out.println(a);
 		 return "login";
 	 }
+	 
+	
 	 
 	
 	

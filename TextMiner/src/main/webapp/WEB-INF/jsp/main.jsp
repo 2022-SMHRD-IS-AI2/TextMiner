@@ -19,8 +19,8 @@
                 <div class="header_right">
                     <ul class="item">
                         <li><a href="board.html">지원사업 공고</a></li>
-                        <li><a href="login.html">LOG IN</a></li>
-                        <li><a href="siginin.html">SIGN IN</a></li>
+                        <li><a href="/login">LOG IN</a></li>
+                        <li><a href="/siginin">SIGN IN</a></li>
                         <li><a href="mypage.html">MY PAGE</a></li>
                     </ul>
                 </div>

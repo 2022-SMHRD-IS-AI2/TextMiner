@@ -28,7 +28,7 @@
                             </li>
                         </ul>
                         <hr class="hr">
-                        <p>아이디가 없으신가요? <a href="siginin.html"> 회원가입 하기</a></p>
+                        <p>아이디가 없으신가요? <a href="/siginin"> 회원가입 하기</a></p>
 
                     </form>
 

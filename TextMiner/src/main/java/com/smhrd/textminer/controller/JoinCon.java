@@ -69,11 +69,7 @@ public class JoinCon {
 	
 	
 	
-	@PostMapping("/siginin")
-	public String asf() {
-		System.out.println("되나?");
-		return "siginin";
-	}
+	
 	
 	
 
