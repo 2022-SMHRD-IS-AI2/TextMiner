@@ -27,7 +27,7 @@
                                 <div id="id_save">아이디 저장 <input type="checkbox" name="id_save"></div>
                             </li>
                         </ul>
-                        <hr>
+                        <hr class="hr">
                         <p>아이디가 없으신가요? <a href="siginin.html"> 회원가입 하기</a></p>
 
                     </form>
