@@ -18,9 +18,9 @@
             <div class="headerConts">
                 <div class="header_right">
                     <ul class="item">
-                        <li><a href="board.jsp">지원사업 공고</a></li>
-                        <li><a href="login.jsp">LOG IN</a></li>
-                        <li><a href="siginin.jsp">SIGN IN</a></li>
+                        <li><a href="/board">지원사업 공고</a></li>
+                        <li><a href="/login">LOG IN</a></li>
+                        <li><a href="/signin">SIGN IN</a></li>
                         <li><a href="mypage.jsp">MY PAGE</a></li>
                     </ul>
                 </div>
