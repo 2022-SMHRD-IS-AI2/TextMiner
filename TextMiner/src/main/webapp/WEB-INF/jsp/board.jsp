@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
             <div class="headerConts">
                 <div class="header_left">
                     <ul class="item">
-                        <li class="s_logo"><a href="main.jsp"><img src="image/head_logo.png"></a></li>
+                        <li class="s_logo"><a href="/"><img src="image/head_logo.png"></a></li>
                     </ul>
                 </div>
                 <div class="header_right">
@@ -74,7 +74,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -82,7 +82,7 @@
                                 <tr>
                                     <td>2</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -90,7 +90,7 @@
                                 <tr>
                                     <td>3</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -98,7 +98,7 @@
                                 <tr>
                                     <td>4</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -106,7 +106,7 @@
                                 <tr>
                                     <td>5</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -114,7 +114,7 @@
                                 <tr>
                                     <td>6</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -122,7 +122,7 @@
                                 <tr>
                                     <td>7</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -130,7 +130,7 @@
                                 <tr>
                                     <td>8</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -138,7 +138,7 @@
                                 <tr>
                                     <td>9</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
@@ -146,7 +146,7 @@
                                 <tr>
                                     <td>10</td>
                                     <td>금융</td>
-                                    <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>

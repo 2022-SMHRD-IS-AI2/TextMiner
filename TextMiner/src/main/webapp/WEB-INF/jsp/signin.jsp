@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 페이지</title>
 
-    <link rel="stylesheet" href="css/siginin.css">
+    <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="css/sign_modal.css">
     <link rel="stylesheet" href="css/sign_checkbox.css">
     <script type="text/javascript" src="JS/hashtag_modal.js" defer></script>
@@ -20,7 +20,7 @@
             <div class="loginWrap">
                 <div class="leftWrap">
                     <form action="/main" method="post" class="join_form">
-                        <a href="main.html">
+                        <a href="/main">
                             <h1>match-up</h1>
                         </a>
                         <h2>Sign in</h2>
@@ -41,7 +41,7 @@
                             <li><input type="submit" value="SIGN IN"></li>
                         </ul>
                         <hr class="hr">
-                        <p>이미 회원이신가요? <a href="login.html"> 로그인 하기</a></p>
+                        <p>이미 회원이신가요? <a href="/login"> 로그인 하기</a></p>
                     </form>
                 </div><!--leftWrap-->
                 <div id="keyword-modal" class="modal">

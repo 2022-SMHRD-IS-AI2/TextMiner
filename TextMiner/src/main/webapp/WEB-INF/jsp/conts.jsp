@@ -17,14 +17,14 @@
             <div class="headerConts">
                 <div class="header_left">
                     <ul class="item">
-                        <li class="s_logo"><a href="main.jsp"><img src="image/head_logo.png"></a></li>
+                        <li class="s_logo"><a href="/"><img src="image/head_logo.png"></a></li>
                     </ul>
                 </div>
                 <div class="header_right">
                     <ul class="item">
-                        <li><a href="board.html">지원사업 공고</a></li>
-                        <li><a href="mypage.html">MY PAGE</a></li>
-                        <li><a href="main.html">LOG OUT</a></li>
+                        <li><a href="/board">지원사업 공고</a></li>
+                        <li><a href="/mypage">MY PAGE</a></li>
+                        <li><a href="/">LOG OUT</a></li>
                     </ul>
                 </div>
             </div><!-- headerConts -->
@@ -86,7 +86,7 @@
                             </ul>
                         </div><!-- tag_list -->
                         <div class="btn_area2">
-                            <a href="./board.html" class="basic_btn03 btn_sky_bg">목록</a>
+                            <a href="/board" class="basic_btn03 btn_sky_bg">목록</a>
                             <a href="#" id="myLink" class="basic_btn03 btn_sky_bg">스크랩</a>
                             <a href="https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000086064" target="_blank" class="basic_btn03 btn_sky_bg">출처 바로가기</a>
                         </div><!-- btn_area2 -->
