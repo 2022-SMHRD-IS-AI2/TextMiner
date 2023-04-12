@@ -37,11 +37,10 @@
                 <div class="keywordWrap">
                     <div class="selectBox click">
                         <button class="label">지원사업명</button>
-                        <ul class="optionList">
+                         <ul class="optionList">
                             <li class="optionItem"><a href="">지원사업명</a></li>
-                            <li class="optionItem"><a href="">지원분야</a></li>
+                            <li class="optionItem"><a href="">사업분야</a></li>
                             <li class="optionItem"><a href="">지자체</a></li>
-                            <li class="optionItem"><a href="">해시태그</a></li>
                         </ul>
                         <script type="text/javascript" src="../JS/board.js"></script>
                     </div><!-- selectBox -->
@@ -50,23 +49,23 @@
                     </form>
                 </div><!--keywordWrap-->
                 <div class="tag_ul_list">
-                    <ul class="tag_ul">
+                       <ul class="tag_ul">
                         <li><a href="">금융</a></li>
-                        <li><a href="">제주</a></li>
-                        <li><a href="">여행업체</a></li>
-                        <li><a href="">2023</a></li>
+                        <li><a href="">제조업</a></li>
+                        <li><a href="">에너지</a></li>
+                        <li><a href="">블록체인</a></li>
                     </ul>
                 </div><!--tag_ul_list-->
                 <div class="main">
                     <div class="board">
                         <table>
                             <thead>
-                                <tr>
+                                   <tr>
                                     <th>번호</th>
                                     <th>사업분야</th>
                                     <th>지원사업명</th>
                                     <th>신청기간</th>
-                                    <th>소관부처</th>
+                                    <th>지자체</th>
                                     <th>등록일</th>
                                 </tr>
                             </thead>
