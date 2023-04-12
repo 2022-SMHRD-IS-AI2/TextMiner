@@ -13,7 +13,7 @@ import com.smhrd.textminer.mapper.LoginMapper;
 	//@Override
 	//public LoginDTO memberLogin(LoginDTO loginDTO) throws Exception {
 		
-		;
+		
 		
 	//}
 
