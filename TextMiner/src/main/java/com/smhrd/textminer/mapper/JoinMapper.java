@@ -12,7 +12,7 @@ import com.smhrd.textminer.dto.JoinDTO;
 @Component
 public interface JoinMapper {
 
-	@Insert("INSERT INTO member VALUES ('${mb_id}', '${mb_pw}', '${mb_name}', '${mb_email}', '${mb_co}', '${mb_call}', 0)")
+	@Insert("INSERT INTO member VALUES ('${mb_id}', '${mb_pw}', '${mb_name}', '${mb_email}', '${mb_firm}', '${mb_call}', '${mb_key1}', '${mb_key2}', '${mb_key3}', '${mb_region}', 0)")
 	void InsertJoinData(JoinDTO joinDTO); // 회원가입 매퍼
 
 }

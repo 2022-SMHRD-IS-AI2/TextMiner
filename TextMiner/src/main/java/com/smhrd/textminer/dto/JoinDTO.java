@@ -27,7 +27,6 @@ public class JoinDTO {
 	@NonNull
 	private String mb_call;
 	
-	
 	private String mb_key1;
 	private String mb_key2;
 	private String mb_key3;
