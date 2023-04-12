@@ -49,46 +49,46 @@
                         <h2>관심 해시태그 선택</h2>
                         <form id="keyword-form">  <!--여기가 바로 폼테그 시작-->
                             <div class="keywordformWrap">
-                                <p>분야별 해시태그</p>
-                                <div class="keywordform1">
+                                <p>분야별 해시태그 (3개 선택)</p>
+                               <div class="keywordform1">
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="keyword1" id="keyword1">
+                                        <input type="checkbox" name="keyword" value="제조업" id="keyword1">
                                         <label for="keyword1">
-                                            <div class="title">키워드1</div>
+                                            <div class="title">제조업</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="keyword2" id="keyword2">
+                                        <input type="checkbox" name="keyword" value="에너지" id="keyword2">
                                         <label for="keyword2">
-                                            <div class="title">키워드2</div>
+                                            <div class="title">에너지</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="keyword3" id="keyword3">
+                                        <input type="checkbox" name="keyword" value="클라우드" id="keyword3">
                                         <label for="keyword3">
-                                            <div class="title">키워드3</div>
+                                            <div class="title">클라우드</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="keyword4" id="keyword4">
+                                        <input type="checkbox" name="keyword" value="통신/보안" id="keyword4">
                                         <label for="keyword4">
-                                            <div class="title">키워드4</div>
+                                            <div class="title">통신/보안</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="keyword5" id="keyword5">
+                                        <input type="checkbox" name="keyword" value="네트워크" id="keyword5">
                                         <label for="keyword5">
-                                            <div class="title">키워드5</div>
+                                            <div class="title">네트워크</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="keyword6" id="keyword6">
+                                        <input type="checkbox" name="keyword" value="금융" id="keyword6">
                                         <label for="keyword6">
-                                            <div class="title">키워드6</div>
+                                            <div class="title">금융</div>
                                         </label>
                                     </div>
                                 </div>
-                                <p>지역별 해시태그</p>
+                                <p>지역별 해시태그 (1개 선택)</p>
                                 <div class="keywordform2">
                                     <div class="form-element">
                                         <input type="checkbox" name="keyword" value="서울" id="keyword7">
