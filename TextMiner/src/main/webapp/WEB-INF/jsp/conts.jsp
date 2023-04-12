@@ -81,8 +81,6 @@
                             <ul class="tag_ul_list">
                                 <li><span>#금융</span></li>
                                 <li><span>#제주</span></li>
-                                <li><span>#여행업체</span></li>
-                                <li><span>#2023</span></li>
                             </ul>
                         </div><!-- tag_list -->
                         <div class="btn_area2">
