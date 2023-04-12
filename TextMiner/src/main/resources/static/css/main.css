@@ -46,7 +46,7 @@ body {margin: 0;}
   background-color: #fff;
   color: #093687;
   display: flex;
-  min-height: 2.5rem;
+  min-height: 5rem;
   align-items: center;
   max-width: 80rem;
   margin : 0 auto;
@@ -139,7 +139,7 @@ body {margin: 0;}
   border-radius: 1rem;
   background-color: #f1f1f1;
   position: relative;
-  background: url("../image/search_btn.png") no-repeat right 15rem center;
+  background: url("../image/search_btn.png") no-repeat right 1.5rem center;
   background-size: 1.25rem;
 }
 
@@ -166,31 +166,18 @@ a.button {
   line-height: 1.75rem;
   color: #FFF;
 }
-.btnFloat {
-  background: none;
-  box-shadow: 0rem rgba(0, 0, 0, 0.5);
-}
-.btnFloat:before {
-  content: 'Float';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6rem;
-  border-radius: .5rem;
-  transition: all 0.2s;
-}
-.btnLightBlue.btnFloat:before {
-  background: rgb(80 125 167);
-}
-.btnFloat:hover:before {
-  margin-top: -0.1rem;
-  margin-left: 0rem;
-  transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1);
-  -webkit-transform: scale(1.1, 1.1);
-  box-shadow: 0rem -0.25rem -0.25rem -0.1rem rgba(0, 0, 0, 0.25);
-}   
+.btnFloat {background: none; box-shadow: 0rem rgba(0, 0, 0, 0.5);}
+.btnFloat:before {content:'관심 사업분야'; display:block; position:absolute;  font-family: 'Noto Sans KR', sans-serif;  font-size: .8rem; font-weight: bold; top:0; left:0; width:6rem; border-radius:.5rem; transition:all 0.2s;}
+.btnLightBlue.btnFloat:before { background: rgb(80 125 167);}
+.btnFloat:hover:before {margin-top: -0.1rem; margin-left: 0rem; transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1.1); -webkit-transform: scale(1.1, 1.1); box-shadow: 0rem -0.25rem -0.25rem -0.1rem rgba(0, 0, 0, 0.25);}   
+
+.btnFloat2 {background: none; box-shadow: 0rem rgba(0, 0, 0, 0.5);}
+.btnFloat2:before {content:'관심 지자체'; display:block; position:absolute; font-family: 'Noto Sans KR', sans-serif; font-size: .8rem; font-weight: bold; top:0; left:0; width:6rem; border-radius:.5rem; transition:all 0.2s;}
+.btnLightBlue.btnFloat2:before { background: rgb(80 125 167);}
+.btnFloat2:hover:before {margin-top: -0.1rem; margin-left: 0rem; transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1.1); -webkit-transform: scale(1.1, 1.1); box-shadow: 0rem -0.25rem -0.25rem -0.1rem rgba(0, 0, 0, 0.25);}   
+
+
+
 
 /* 버튼 디자인 */
 .main_bottom {
@@ -379,4 +366,4 @@ a.button {
 .scroll {
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */
-};
+}

@@ -18,12 +18,9 @@
             <div class="headerConts">
                 <div class="header_right">
                     <ul class="item">
-
-                        <li><a href="/board">지원사업 공고</a></li>
+ 						<li><a href="/board">지원사업 공고</a></li>
                         <li><a href="/login">LOG IN</a></li>
                         <li><a href="/signin">SIGN IN</a></li>
-                        <li><a href="/mypage">MY PAGE</a></li>
-
                     </ul>
                 </div>
             </div><!-- headerConts -->
@@ -46,8 +43,8 @@
                 <div class="main_bottomWrap">
                     <div class="keyword_wrap">
                         <div class="keyword">
-                            <a href="#" class="button btnFloat btnLightBlue" onclick="changeText()">Float</a>
-                            <a href="#" class="button btnFloat btnLightBlue" onclick="changeText()">Float</a>
+                            <a href="#" class="button btnFloat btnLightBlue" onclick="changeText()"></a>
+                            <a href="#" class="button btnFloat2 btnLightBlue" onclick="changeText()"></a>
                         </div>
                     </div>
                     <div class="main_bottom">
