@@ -43,17 +43,17 @@ public class SigninCon {
 	// System.out.println(a);
 	// return "main";
 	// }
-	@PostMapping("/main")
+	@PostMapping("/")
 	public void servletReqeust(HttpServletRequest httpRequest) {
 		String mb_id = httpRequest.getParameter("mb_id").toString();
 		String mb_pw = httpRequest.getParameter("mb_pw").toString();
 		String mb_name = httpRequest.getParameter("mb_name").toString();
 		String mb_email = httpRequest.getParameter("mb_email").toString();
-		String mb_co = httpRequest.getParameter("mb_co").toString();
+		String mb_firm = httpRequest.getParameter("mb_firm").toString();
 		String mb_call = httpRequest.getParameter("mb_call").toString();
 
 		System.out.println(mb_id);
-		JoinDTO dto = new JoinDTO(mb_id, mb_pw, mb_name, mb_email, mb_co, mb_call);
+		JoinDTO dto = new JoinDTO(mb_id, mb_pw, mb_name, mb_email, mb_firm, mb_call);
 
 		joinMapper.InsertJoinData(dto);
 

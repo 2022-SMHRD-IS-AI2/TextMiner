@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.textminer.dto.JoinDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,6 +19,12 @@
             <div class="headerConts">
                 <div class="header_right">
                     <ul class="item">
+                    <%  JoinDTO dto = (JoinDTO)session.getAttribute("dto");
+                    
+                    	String mb_id = dto.getMb_id();
+                 
+                    %>
+                    <li><a href="board.html"><%=mb_id %></a></li>
                         <li><a href="board.html">지원사업 공고</a></li>
                         <li><a href="mypage.html">MY PAGE</a></li>
                         <li><a href="login.html">LOG OUT</a></li>

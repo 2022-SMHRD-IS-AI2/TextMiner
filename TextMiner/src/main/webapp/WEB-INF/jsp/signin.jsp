@@ -31,7 +31,7 @@
                             <li><input type="text" placeholder="이름을 입력해주세요" name="mb_name" required maxlength="30"></li>
                             <li><input type="text" placeholder="E-mail을 입력해주세요" name="mb_email" required maxlength="30">
                             </li>
-                            <li><input type="text" placeholder="기업 명 을 입력해주세요" name="mb_co" required maxlength="30">
+                            <li><input type="text" placeholder="기업 명 을 입력해주세요" name="mb_firm" required maxlength="30">
                             </li>
                             <li><input type="text" placeholder="전화번호를 입력해주세요" name="mb_call" required maxlength="30"></li>
                             <li>
