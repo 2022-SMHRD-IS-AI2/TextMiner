@@ -29,6 +29,9 @@ public class UrlMappingCon {
 	@GetMapping("/")  // 메인 페이지 관련
 	public String root() {
 		System.out.println("메인페이지 출력");
+		
+		
+		
 		return "main";
 	}
 	
