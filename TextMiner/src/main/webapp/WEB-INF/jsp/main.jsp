@@ -18,14 +18,14 @@
             <div class="headerConts">
                 <div class="header_right">
                     <ul class="item">
- 						<li><a href="/board">지원사업 공고</a></li>
+                        <li><a href="/board">지원사업 공고</a></li>
                         <li><a href="/login">LOG IN</a></li>
                         <li><a href="/signin">SIGN IN</a></li>
                     </ul>
                 </div>
             </div><!-- headerConts -->
         </header> <!-- header -->
-         <div class="mainWrap">
+        <div class="mainWrap">
             <div class="main">
                 <div class="maintopWrap">
                     <div class="main_left">
@@ -47,7 +47,7 @@
                             <a href="#" class="button btnFloat2 btnLightBlue" onclick="changeText()">관심 지자체</a>
                         </div>
                     </div>
-                    <div class="main_bottom">
+                    <div class="main_bottom scroll">
                         <div class="bottom_wrap">
                             <div class="box">
                                 <h4 class="txt_head" id="head1">2022년 국가 재난대비 지정장례식장 교육 안내</h4>
@@ -78,7 +78,7 @@
                                 <p class="txt_contents mb00" id="contents4-3">* 식당, 매점 주차장 근무자 등은 제외</p>
                             </div>
                         </div>
-                        <div class="bottom_wrap">
+                        <div class="bottom_wrap display_none">
                             <div class="box">
                                 <h4 class="txt_head" id="head5">2022년 국가 재난대비 지정장례식장 교육 안내</h4>
                                 <p class="txt_date" id="date5">2023.03.24~2023.04.27</p>
@@ -108,6 +108,7 @@
                                 <p class="txt_contents mb00" id="contents8-3">* 식당, 매점 주차장 근무자 등은 제외</p>
                             </div>
                         </div>
+                    </div><!-- main_bottomWrap -->
                 </div><!-- main_bottomWrap -->
             </div> <!-- main -->
         </div><!-- mainWrap -->
@@ -120,7 +121,5 @@
         </div><!-- footer -->
     </div><!-- #wrap -->
 
-
 </body>
-
 </html>
