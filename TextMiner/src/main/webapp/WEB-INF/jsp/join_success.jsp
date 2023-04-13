@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원가입 성공</title>
 </head>
 <body>
+	
+	<script>
+		alert('회원가입에 성공하셨습니다 ! 로그인해주세요.')
+		location.href="/login";
+	</script>
 
 </body>
 </html>
