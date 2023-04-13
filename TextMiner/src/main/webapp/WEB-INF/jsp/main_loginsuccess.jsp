@@ -24,10 +24,10 @@
                     	String mb_id = dto.getMb_id();
                  
                     %>
-                    <li><a href="board.html"><%=mb_id %></a></li>
-                        <li><a href="board.html">지원사업 공고</a></li>
-                        <li><a href="mypage.html">MY PAGE</a></li>
-                        <li><a href="login.html">LOG OUT</a></li>
+                    <li><a href="/mypage"><%=mb_id%></a></li>
+                        <li><a href="/board">지원사업 공고</a></li>
+                        <li><a href="/mypage">MY PAGE</a></li>
+                        <li><a href="/">LOG OUT</a></li>
                     </ul>
                 </div>
             </div><!-- headerConts -->
@@ -36,7 +36,7 @@
             <div class="main">
                 <div class="maintopWrap">
                     <div class="main_left">
-                        <a href="main.html"><img class="logo_img" src="../image/logo.png" /></a>
+                        <a href="/lo_main"><img class="logo_img" src="../image/logo.png" /></a>
                         <p class="ment1">지원사업 공고 매칭 사이트</p>
                         <p class="ment2">나에게 맞는 지원사업 공고를 검색해 보세요!</p>
                         <form action="#">

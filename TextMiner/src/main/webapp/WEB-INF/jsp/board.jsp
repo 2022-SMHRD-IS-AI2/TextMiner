@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html> 
@@ -29,6 +30,8 @@
                 </div>
             </div><!-- headerConts -->
         </header> <!-- header -->
+        
+      
         <div class="mainWrap">
             <div class="visual">
                 <strong>지원사업 공고</strong>
