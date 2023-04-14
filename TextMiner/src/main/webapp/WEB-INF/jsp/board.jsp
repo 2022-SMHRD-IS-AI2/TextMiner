@@ -15,9 +15,6 @@
 </head>
 
 
-<% BoardDTO dto = (BoardDTO)session.getAttribute("list");
-	int b_seq = dto.getB_seq();
-%>
 
 
 <body class="scroll">
