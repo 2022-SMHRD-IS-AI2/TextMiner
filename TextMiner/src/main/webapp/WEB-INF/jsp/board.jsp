@@ -1,4 +1,6 @@
 
+<%@page import="com.smhrd.textminer.mapper.BoardMapper"%>
+<%@page import="com.smhrd.textminer.dto.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html> 
@@ -11,6 +13,12 @@
 
     <link rel="stylesheet" href="css/board.css">
 </head>
+
+
+<% BoardDTO dto = (BoardDTO)session.getAttribute("list");
+	int b_seq = dto.getB_seq();
+%>
+
 
 <body class="scroll">
     <div id="wrap">

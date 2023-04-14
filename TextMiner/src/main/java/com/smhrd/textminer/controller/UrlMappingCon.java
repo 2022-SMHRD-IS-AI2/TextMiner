@@ -53,11 +53,11 @@ public class UrlMappingCon {
 //		 
 //	 }
 	
-	@GetMapping("/board")
-	public String boardView() {
-		System.out.println("모집공고 페이지 출력");
-		return "board";
-	}
+//	@GetMapping("/board")
+//	public String boardView() {
+//		System.out.println("모집공고 페이지 출력");
+//		return "board";
+//	}
 
 //	@GetMapping("/conts")
 //	public String contsView() {

@@ -34,7 +34,7 @@ public class LoginCon {
 
 		LoginDTO dto = new LoginDTO(mb_id, mb_pw);
 
-		System.out.println(dto);
+//		System.out.println(dto);
 
 		JoinDTO loginUser = loginMapper.selectMember(dto);
 
