@@ -27,7 +27,7 @@ public class LoginCon {
 	@PostMapping("/lo_main")
 	public String servletReqeust(HttpServletRequest request) {
 
-		String mb_id = request.getParameter("mb_id").toString();
+		String mb_id = request.getParameter("mb_id");
 		String mb_pw = request.getParameter("mb_pw").toString();
 
 		System.out.println(mb_id + " " + mb_pw);

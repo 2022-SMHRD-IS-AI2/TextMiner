@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.textminer.dto.contsDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -86,7 +87,10 @@
                         <div class="btn_area2">
                             <a href="/board" class="basic_btn03 btn_sky_bg">목록</a>
                             <a href="#" id="myLink" class="basic_btn03 btn_sky_bg">스크랩</a>
-                            <a href="https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000086064" target="_blank" class="basic_btn03 btn_sky_bg">출처 바로가기</a>
+                            <%  contsDTO conts = (contsDTO)session.getAttribute("conts");
+                     			String b_url = conts.getB_url();
+                     			%>
+                            <a href="<%=b_url%>" target="_blank" class="basic_btn03 btn_sky_bg">출처 바로가기</a>
                         </div><!-- btn_area2 -->
                
                     </div> <!-- contsBox -->

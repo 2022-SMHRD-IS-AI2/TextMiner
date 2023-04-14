@@ -50,8 +50,7 @@
 	    <version>3.0.1</version>  
 	    </dependency>
 	    
-	    
-	           
+	        
 	    <dependency>
 	        <groupId>org.mariadb.jdbc</groupId>
 	        <artifactId>mariadb-java-client</artifactId>
@@ -71,12 +70,13 @@
 	     
 	     
 	     
-	     
+		<!-- tomcat-embed-jasper-->
 	     <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
 
+		<!-- jstl-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
