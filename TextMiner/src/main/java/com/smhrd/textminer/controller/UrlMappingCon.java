@@ -70,5 +70,32 @@ public class UrlMappingCon {
 		System.out.println("마이페이지 출력");
 		return "mypage";
 	}
+	
+	
+	
+	
+	@GetMapping("/mypage_calendar")
+	public String mypage_calendarView() {
+		System.out.println("마이페이지 캘린더 출력");
+		return "mypage_calendar";
+	}
 
+	
+	@GetMapping("/mypage_member")
+	public String mypage_member() {
+		System.out.println("마이페이지 정보수정 출력");
+		return "mypage_member";
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

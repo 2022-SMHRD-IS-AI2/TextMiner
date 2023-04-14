@@ -27,6 +27,7 @@ public class contsDTO {
 	private String b_or;
 	private String b_sor;
 	private String b_conts;
+	private String b_date;
 
 	
 }

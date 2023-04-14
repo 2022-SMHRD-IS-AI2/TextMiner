@@ -24,7 +24,7 @@
             <div class="headerConts">
                 <div class="header_left">
                     <ul class="item">
-                        <li class="s_logo"><a href="main.html"><img src="../image/head_logo.png"></a></li>
+                        <li class="s_logo"><a href="/"><img src="../image/head_logo.png"></a></li>
                     </ul>
                 </div>
                 <div class="header_right">
@@ -44,9 +44,9 @@
                 <div class="contsWrap">
                     <div class="topMenu">
                         <ul>
-                            <li><a href="./mypage.html" class="menuLink">스크랩</a></li>
-                            <li><a href="./mypage_member.html" class="menuLink">정보수정</a></li>
-                            <li><a href="./mypage_calendar.html" class="menuLink">캘린더</a></li>
+                            <li><a href="/mypage" class="menuLink">스크랩</a></li>
+                            <li><a href="/mypage_member" class="menuLink">정보수정</a></li>
+                            <li><a href="/mypage_calendar" class="menuLink">캘린더</a></li>
                         </ul>
                     </div><!-- topMenu -->
                     <div class="scrapTable">

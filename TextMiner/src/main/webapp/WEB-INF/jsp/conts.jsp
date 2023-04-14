@@ -13,6 +13,18 @@
     <script type="text/javascript" src="JS/alert.js" defer></script>
 </head>
 <body class="scroll">
+ <%  contsDTO conts = (contsDTO)session.getAttribute("conts");
+ 	 Integer b_seq = conts.getB_seq();
+     String b_keyword = conts.getB_keyword();
+     String b_title = conts.getB_title();
+     String b_region = conts.getB_region();
+     String b_url = conts.getB_url();
+     String b_or = conts.getB_or();
+     String b_sor = conts.getB_sor();
+     String b_conts = conts.getB_conts();  
+     String b_date = conts.getB_date();
+%>
+
     <div id="wrap">
         <header class="header">
             <div class="headerConts">
@@ -41,9 +53,9 @@
                         <div class="title_area">
                             <div class="float:left;">
                                 <div class="category">
-                                    <span class="c-blue">금융</span>
+                                    <span class="c-blue"><%=b_keyword%></span>
                                 </div>
-                                <h2 class="title">[제주] 2023년 도내 여행업 보증보험 지원사업 안내 공고</h2>
+                                <h2 class="title"><%=b_title%></h2>
                             </div>   
                         </div>
                         <div class="top_info">
@@ -55,19 +67,20 @@
                             <ul>
                                 <li>
                                     <span class="s_title">지자체</span>
-                                    <div class="txt">제주특별자치도</div>
+                                    <div class="txt"><%=b_or%></div>
                                 </li>
                                 <li>
                                     <span class="s_title">수행기관</span>
-                                    <div class="txt">제주특별자치도 관광협회</div>
+                                    <div class="txt"><%=b_sor%></div>
                                 </li>
                                 <li>
                                     <span class="s_title">신청기간</span>
-                                    <div class="txt">2023.04.04 ~ 2023.12.29</div>
+                                    <div class="txt"><%=b_date%></div>
                                 </li>
                                 <li>
                                     <span class="s_title">사업개요</span>
                                     <div class="txt">
+                                    	<p><%=b_conts%></p>
                                         <p>여행업체의 의무가입인 보증보험료 지원을 통해 도내 여행업체의 사기 진작과 안전한 여행환경 조성을 위하여 다음과 같이 도내 여행업 보증보험료 지원업체를 모집하오니 많은 관심과 참여 바랍니다.</p>
                                         <p><br></p>
                                         <p>- 제주특별자치도내 등록된 여행업체</p>
@@ -80,16 +93,15 @@
                         </div><!-- view_cont -->
                         <div class="tag_list">
                             <ul class="tag_ul_list">
-                                <li><span>#금융</span></li>
-                                <li><span>#제주</span></li>
+                                <li><span>#<%=b_keyword%></span></li>
+                                <li><span>#<%=b_region%></span></li>
                             </ul>
                         </div><!-- tag_list -->
                         <div class="btn_area2">
                             <a href="/board" class="basic_btn03 btn_sky_bg">목록</a>
-                            <a href="#" id="myLink" class="basic_btn03 btn_sky_bg">스크랩</a>
-                            <%  contsDTO conts = (contsDTO)session.getAttribute("conts");
-                     			String b_url = conts.getB_url();
-                     			%>
+                            
+                            <!-- !!!!!!인성님 도와주세요!!!!!!!! 찜기능 어케 만드나요 ㅜ-->
+                            <a href="/mypage" id="myLink" class="basic_btn03 btn_sky_bg">스크랩</a>
                             <a href="<%=b_url%>" target="_blank" class="basic_btn03 btn_sky_bg">출처 바로가기</a>
                         </div><!-- btn_area2 -->
                

@@ -27,14 +27,14 @@
           <div class="headerConts">
               <div class="header_left">
                   <ul class="item">
-                      <li class="s_logo"><a href="main.html"><img src="../image/head_logo.png"></a></li>
+                      <li class="s_logo"><a href="/"><img src="../image/head_logo.png"></a></li>
                   </ul>
               </div>
               <div class="header_right">
                   <ul class="item">
-                      <li><a href="board.html">지원사업 공고</a></li>
-                      <li><a href="mypage.html">MY PAGE</a></li>
-                      <li><a href="main.html">LOG OUT</a></li>
+                      <li><a href="/board">지원사업 공고</a></li>
+                      <li><a href="/mypage">MY PAGE</a></li>
+                      <li><a href="/">LOG OUT</a></li>
                   </ul>
               </div>
           </div><!-- headerConts -->
@@ -47,9 +47,9 @@
               <div class="contsWrap">
                 <div class="topMenu">
                     <ul>
-                        <li><a href="./mypage.html" class="menuLink">스크랩</a></li>
-                        <li><a href="./mypage_member.html" class="menuLink">정보수정</a></li>
-                        <li><a href="./mypage_member.html" class="menuLink">캘린더</a></li>
+                        <li><a href="/mypage" class="menuLink">스크랩</a></li>
+                        <li><a href="/mypage_member" class="menuLink">정보수정</a></li>
+                        <li><a href="/mypage_member" class="menuLink">캘린더</a></li>
                     </ul>
                 </div><!-- topMenu -->
                 <div class="calendar_wrap">

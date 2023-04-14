@@ -33,6 +33,7 @@ public class ContsCon {
 //		String b_or = httpRequest.getParameter("b_or").toString();
 //		String b_sor = httpRequest.getParameter("b_sor").toString();
 //		String b_conts = httpRequest.getParameter("b_conts").toString();
+//		String b_date = httpRequest.getParameter("b_date").toString();
 		
 		contsDTO conts = new contsDTO();
 		ContsMapper.conts(1);
