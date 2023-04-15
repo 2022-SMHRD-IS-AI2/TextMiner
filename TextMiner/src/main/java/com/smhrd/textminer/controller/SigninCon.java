@@ -1,6 +1,9 @@
 package com.smhrd.textminer.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -50,15 +53,34 @@ public class SigninCon {
 		String mb_email = httpRequest.getParameter("mb_email").toString();
 		String mb_firm = httpRequest.getParameter("mb_firm").toString();
 		String mb_call = httpRequest.getParameter("mb_call").toString();
-		String hash = httpRequest.getParameter("keyword-button");
+		String hash = httpRequest.getParameter("hash");
+		String[] hash_split = hash.split(", ");
+		
+		List<String> hashList = new ArrayList<>(3);
+				
+		for (int i = 0 ; i < hash_split.length; i ++) {
+			
+			hashList.add(hash_split[i]);
+			
+		}
 		
 		
-		System.out.println(hash+"왜안뎀");
+		List<String> areaList = new ArrayList<>(Arrays.asList("서울", "인천", "부산", "대구", "대전", "광주", "울산", "세종", "경기도", "강원도", "충청북도", "충청남도", "전라북도"));
+		List<String> area = new ArrayList<>(1);
 		
-		String mb_key1 = httpRequest.getParameter("mb_key1");
-		String mb_key2 = httpRequest.getParameter("mb_key2");
-		String mb_key3 = httpRequest.getParameter("mb_key3");
-		String mb_region = httpRequest.getParameter("mb_region");
+		
+		for(String i: hash_split ) {
+			if (areaList.contains(i)) {
+				area.add(i);
+				hashList.remove(i);
+			}
+			
+		}
+		
+		String mb_key1 = hashList.get(0);
+		String mb_key2 =  hashList.get(1);;
+		String mb_key3 =  hashList.get(2);;
+		String mb_region = area.get(0);
 		
 		System.out.println(mb_id);
 		
