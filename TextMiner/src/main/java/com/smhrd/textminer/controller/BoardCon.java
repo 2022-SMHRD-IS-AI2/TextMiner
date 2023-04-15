@@ -1,22 +1,20 @@
 package com.smhrd.textminer.controller;
 
-import java.io.IOException;
-import java.net.http.HttpRequest;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import com.smhrd.textminer.dto.BoardDTO;
 import com.smhrd.textminer.mapper.BoardMapper;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+
 
 
 
@@ -29,7 +27,7 @@ public class BoardCon{
    private BoardMapper boardMapper;
    
    @RequestMapping("/board")
-   public String BoardList(Model model) {
+   public String BoardList(HttpServletRequest request) {
       
       System.out.println("보드컨트롤러들어오는지 확인");
       List<BoardDTO> boardList = boardMapper.selectBoardList();
@@ -41,7 +39,11 @@ public class BoardCon{
       
       System.out.println("위글과구분점");
 //      System.out.println(boardList);
-      model.addAttribute("list", boardList); //value 값에 객체 지정 실시
+     // model.addAttribute("list", boardList); //value 값에 객체 지정 실시
+      
+      HttpSession session = request.getSession();
+      
+      session.setAttribute("list", boardList);
       
       
 //      System.out.println(model);

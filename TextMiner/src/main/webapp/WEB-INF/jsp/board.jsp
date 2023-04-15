@@ -1,10 +1,11 @@
 
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.textminer.mapper.BoardMapper"%>
 <%@page import="com.smhrd.textminer.dto.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html> 
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,10 @@
     <title>지원사업 공고 게시판</title>
 
     <link rel="stylesheet" href="css/board.css">
+    
+   <%  List<BoardDTO> dto = (List<BoardDTO>)session.getAttribute("list");%>
+                    
+   					
 </head>
 
 
@@ -78,14 +83,35 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>금융</td>
-                                    <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
-                                    <td>2023-04-17 ~ 2023-12-31</td>
-                                    <td>산업통상 자원부</td>
-                                    <td>2023-04-03</td>
-                                </tr>
+                            
+                            
+                            <%	
+                            	for(int i = 0; i< dto.size() ;i++) {
+                            	
+                            	BoardDTO dtodto = dto.get(i);
+   								
+                            	
+                            	
+		   						int seq = dtodto.getB_seq();
+		   						String keyword = dtodto.getB_keyword();
+		   						
+		                    	String title = dtodto.getB_title();
+		                    	
+		                    	String region = dtodto.getB_region();
+                            	}
+		
+		                    %>
+                            
+                            
+                            
+							    <tr th:each="blist : ${boardList}">
+							         <td><%=seq %></td>    
+							         <td><%=keyword %></td>
+							         <td><%=title %></td>
+							         <td>신청기간입력란</td>
+							         <td><%=region %></td>
+                                     <td>등록날자입력란</td>
+							    </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>금융</td>

@@ -15,7 +15,7 @@ public interface BoardMapper {
 	// https://dlgkstjq623.tistory.com/305 참고했음
 	
 	
-	// 게시글 번호의 내림차순으로 게시판 검색
+	// 게시글 번호의 내림차순으로 게시판 검색 --> ORDER BY b_seq DESC
 	@Select("SELECT * FROM board ORDER BY b_seq DESC")
 	public List<BoardDTO> selectBoardList();
 
