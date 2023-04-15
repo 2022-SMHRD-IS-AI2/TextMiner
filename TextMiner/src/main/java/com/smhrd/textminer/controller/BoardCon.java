@@ -49,6 +49,7 @@ public class BoardCon{
 //      System.out.println(model);
       System.out.println(boardList);
       return "board";
+      
    }
    
    

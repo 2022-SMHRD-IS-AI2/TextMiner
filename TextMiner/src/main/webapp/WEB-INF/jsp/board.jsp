@@ -90,29 +90,26 @@
                             	
                             	BoardDTO dtodto = dto.get(i);
    								
-                            	
-                            	
 		   						int seq = dtodto.getB_seq();
 		   						String keyword = dtodto.getB_keyword();
-		   						
 		                    	String title = dtodto.getB_title();
-		                    	
 		                    	String region = dtodto.getB_region();
-                            	}
+                            	
 		
 		                    %>
                             
                             
                             
-							    <tr th:each="blist : ${boardList}">
-							         <td><%=seq %></td>    
+							    <tr>
+							         <td><%=seq%></td>    
 							         <td><%=keyword %></td>
 							         <td><%=title %></td>
 							         <td>신청기간입력란</td>
 							         <td><%=region %></td>
                                      <td>등록날자입력란</td>
 							    </tr>
-                                <tr>
+							    <%} %>
+                                <!-- <tr>
                                     <td>2</td>
                                     <td>금융</td>
                                     <td><a href="/conts">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
@@ -183,7 +180,7 @@
                                     <td>2023-04-17 ~ 2023-12-31</td>
                                     <td>산업통상 자원부</td>
                                     <td>2023-04-03</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                         <div class="page-wrap">

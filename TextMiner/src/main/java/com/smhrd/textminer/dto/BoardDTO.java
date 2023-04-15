@@ -23,6 +23,7 @@ public class BoardDTO {
 	private String b_conts;
 	private String b_region;
 	private String b_url;
-	private Date b_date;
+	private Date b_sdate;
+	private Date b_edate;
 
 }
