@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.smhrd.textminer.dto.JoinDTO;
@@ -40,6 +41,7 @@ public class SigninCon {
 	// System.out.println(a);
 	// return "main";
 	// }
+	
 	@PostMapping("/")
 	public ModelAndView servletReqeust(HttpServletRequest httpRequest) throws IOException {
 		String mb_id = httpRequest.getParameter("mb_id").toString();
@@ -48,6 +50,11 @@ public class SigninCon {
 		String mb_email = httpRequest.getParameter("mb_email").toString();
 		String mb_firm = httpRequest.getParameter("mb_firm").toString();
 		String mb_call = httpRequest.getParameter("mb_call").toString();
+		String hash = httpRequest.getParameter("keyword-button");
+		
+		
+		System.out.println(hash+"왜안뎀");
+		
 		String mb_key1 = httpRequest.getParameter("mb_key1");
 		String mb_key2 = httpRequest.getParameter("mb_key2");
 		String mb_key3 = httpRequest.getParameter("mb_key3");

@@ -24,6 +24,9 @@ document.getElementById("keyword-form").addEventListener("submit", function (eve
     keywordButton.classList.remove("selected");
   } else {
     keywordButton.innerHTML = selectedKeywords.join(", ");
+    
+    document.setEli.va = selectedKeywords.join(", ");
+    
     keywordButton.classList.add("selected");
   }
 

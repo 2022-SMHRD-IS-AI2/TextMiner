@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="css/sign_modal.css">
     <link rel="stylesheet" href="css/sign_checkbox.css">
-    <script type="text/javascript" src="JS/hashtag_modal.js" defer></script>
+	<!--  <script type="text/javascript" src="JS/hashtag_modal.js" defer></script>-->
 </head>
 
 <body>
@@ -37,7 +37,8 @@
                             <li>
                                 <p>원하는 해시태그를 등록해 보세요</p>
                             </li>
-                            <li><button type="button" id="keyword-button">해시태그 등록</button></li>
+                            
+                            <li><input type="checkbox" name = "keyword-button" id="keyword-button" value="해시태그 등록">해시태그 등록</input></li>
                             <li><input type="submit" value="SIGN IN"></li>
                         </ul>
                         <hr class="hr">
