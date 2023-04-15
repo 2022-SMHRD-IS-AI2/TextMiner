@@ -82,6 +82,9 @@ body {margin: 0;}
 /* search__input */
 .keywordWrap .search__input {width: 14.8rem; height: 2rem; padding: 0; text-indent: 0.8rem; float: left; border: 1px solid #999; background: url("../image/search_btn_blue.png") no-repeat right 0.75rem center; background-size: 1.25rem;}
 
+
+
+
 /* tag_list 키워드 태그들 디자인 */
 .tag_ul_list {position: relative; display: flex; justify-self: left;}
 .tag_ul {padding: 0;}
@@ -98,6 +101,8 @@ td {padding: 19px 5px 20px; font-size: 0.875em; font-weight: 400; text-align: ce
 a {text-decoration: none; color: #333;}
 a:hover {text-decoration: underline;}
 .page-nation li {list-style: none;}
+/* 글이 길때 줄임표 표시기능 */
+td.ellipsis {max-width:10rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;} 
 
 /* 메인 - 페이지네이션*/
 .page-wrap {text-align: center; font-size: 0;}

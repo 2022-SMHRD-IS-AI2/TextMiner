@@ -1,4 +1,6 @@
 
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.textminer.mapper.BoardMapper"%>
 <%@page import="com.smhrd.textminer.dto.BoardDTO"%>
@@ -77,9 +79,9 @@
                                     <th>번호</th>
                                     <th>사업분야</th>
                                     <th>지원사업명</th>
-                                    <th>신청기간</th>
-                                    <th>지자체</th>
-                                    <th>등록일</th>
+                                    <th>지역</th>
+                                    <th>시작일자</th>
+                                    <th>마감일자</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,6 +96,15 @@
 		   						String keyword = dtodto.getB_keyword();
 		                    	String title = dtodto.getB_title();
 		                    	String region = dtodto.getB_region();
+		                    	Date sdate = dtodto.getB_sdate();
+		                    	Date edate = dtodto.getB_edate();
+		                    	
+		                    	
+		                    	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		                    	Date transSdate = dtodto.getB_sdate();
+		                    	String tSdate = dateFormat.format(transSdate);
+			                    Date transEdate = dtodto.getB_edate();
+			                    String tEdate = dateFormat.format(transEdate);
                             	
 		
 		                    %>
@@ -102,11 +113,11 @@
                             
 							    <tr>
 							         <td><%=seq%></td>    
-							         <td><%=keyword %></td>
-							         <td><%=title %></td>
-							         <td>신청기간입력란</td>
+							         <td class="ellipsis"><%=keyword %></td>
+							         <td><a><%=title %></a></td>
 							         <td><%=region %></td>
-                                     <td>등록날자입력란</td>
+							         <td><%=tSdate %></td>
+                                     <td><%=tEdate %></td>
 							    </tr>
 							    <%} %>
                                 <!-- <tr>

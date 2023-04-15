@@ -29,7 +29,6 @@ public class BoardCon{
    @RequestMapping("/board")
    public String BoardList(HttpServletRequest request) {
       
-      System.out.println("보드컨트롤러들어오는지 확인");
       List<BoardDTO> boardList = boardMapper.selectBoardList();
       
 //      for(BoardDTO bdto : boardList) {
@@ -37,17 +36,14 @@ public class BoardCon{
 //      }
       
       
-      System.out.println("위글과구분점");
-//      System.out.println(boardList);
      // model.addAttribute("list", boardList); //value 값에 객체 지정 실시
       
       HttpSession session = request.getSession();
       
       session.setAttribute("list", boardList);
       
-      
-//      System.out.println(model);
-      System.out.println(boardList);
+     
+    
       return "board";
       
    }
