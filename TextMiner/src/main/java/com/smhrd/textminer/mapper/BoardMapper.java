@@ -16,10 +16,14 @@ public interface BoardMapper {
 	
 	
 	// 게시글 번호의 내림차순으로 게시판 검색 --> ORDER BY b_seq DESC
-	@Select("SELECT * FROM board ORDER BY b_seq DESC")
-	public List<BoardDTO> selectBoardList();
-
+	@Select("SELECT * FROM board  ORDER BY b_seq DESC LIMIT #{offset},#{limit}")
+	public List<BoardDTO> selectBoardList(int offset, int limit);
+	
+	
+	@Select ("SELECT count(*) FROM board")
+	public int getBoardCount();
 	}
+
 	
 		
 	

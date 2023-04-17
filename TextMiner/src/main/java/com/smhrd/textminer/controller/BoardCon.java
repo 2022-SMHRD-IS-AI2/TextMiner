@@ -19,7 +19,6 @@ import jakarta.servlet.http.HttpSession;
 
 
 @Controller
-
 public class BoardCon{
    
    
@@ -28,8 +27,21 @@ public class BoardCon{
    
    @RequestMapping("/board")
    public String BoardList(HttpServletRequest request) {
-      
-      List<BoardDTO> boardList = boardMapper.selectBoardList();
+	   
+	  String pageParam = request.getParameter("page");
+	  int page =1; // 초기값 1설정
+	  
+	  if(pageParam != null) {
+		  page = Integer.parseInt(pageParam);
+	  }
+	  int limit = 10;
+	  int offset = (page-1)*limit;
+	  
+	  List<BoardDTO> boardList = boardMapper.selectBoardList(offset, limit);
+	 
+	  int totalCount = boardMapper.getBoardCount();
+	  int totalPage = (totalCount % limit ==0) ? totalCount / limit : totalCount / limit + 1; 
+//      List<BoardDTO> boardList = boardMapper.selectBoardList();
       
 //      for(BoardDTO bdto : boardList) {
 //         System.out.println(bdto);
@@ -41,8 +53,14 @@ public class BoardCon{
       HttpSession session = request.getSession();
       
       session.setAttribute("list", boardList);
+      session.setAttribute("cnt", totalCount);
+      session.setAttribute("currentPage", page);
+      session.setAttribute("totalPage", totalPage);
       
-     
+      System.out.println("offset :" + offset +"\t limit : " + limit);
+      System.out.println("게시물 10개 출력" + boardList);
+      System.out.println("총 게시물 수 구하기 "+ totalCount);
+      System.out.println("현재 페이지"+ page);
     
       return "board";
       
