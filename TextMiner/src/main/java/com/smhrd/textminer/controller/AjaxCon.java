@@ -28,27 +28,33 @@ public class AjaxCon {
 	@GetMapping("/AjaxCon")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		
+		System.out.println("에이젝스 넘어옴");
 		
+		int b_seq = Integer.parseInt(request.getParameter("seq"));
+		
+		System.out.println(b_seq);
 		
 		PrintWriter out = response.getWriter();
 		
 		HttpSession session = request.getSession();
-	      
+	    
 	    JoinDTO dto = (JoinDTO)session.getAttribute("dto");
 		
-	    try {
-	    
+	   try {
+	    	System.out.println("트라이문 안");
+	    	
 			String mb_id = dto.getMb_id();
 			
-			int b_seq = Integer.parseInt(request.getParameter("seq"));
+			
 			
 			contsmapper.scrap(mb_id, b_seq);
 			
 			
 			out.print("성공");
-		
-	    }catch (Exception e) {
+			System.out.println("성공");
+	  }catch (Exception e) {
 			out.print("실패");
+			System.out.println("실패");
 		}
 		
 		

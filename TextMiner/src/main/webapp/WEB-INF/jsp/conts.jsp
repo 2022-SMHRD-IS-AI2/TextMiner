@@ -14,26 +14,27 @@
     <title>공고 세부내용 게시판</title>
     
     <link rel="stylesheet" href="css/conts.css">
-    <script type="text/javascript" src="JS/alert.js" defer></script>
-<<<<<<< HEAD
+    <!-- <script type="text/javascript" src="JS/alert.js" defer></script> -->
+
     <script type="text/javascript" src="JS/scrap.js" defer></script>
     <script type="text/javascript" src="JS/jquery-3.6.4.min.js" defer></script>
 
 </head>
 <body class="scroll">
 <%  contsDTO conts = (contsDTO)session.getAttribute("conts");
- 	 int b_seq = conts.getB_seq();
-     String b_keyword = conts.getB_keyword();
-     String b_title = conts.getB_title();
-     String b_or = conts.getB_or();
-     String b_sor = conts.getB_sor();
-     String b_conts = conts.getB_conts(); 
-     String b_region = conts.getB_region();
-     String b_url = conts.getB_url();
-     Date b_sdate = conts.getB_sdate();
-     Date b_edate = conts.getB_edate();
+	
+ 	int b_seq = conts.getB_seq();
+    String b_keyword = conts.getB_keyword();
+    String b_title = conts.getB_title();
+    String b_or = conts.getB_or();
+    String b_sor = conts.getB_sor();
+    String b_conts = conts.getB_conts(); 
+    String b_region = conts.getB_region();
+    String b_url = conts.getB_url();
+    Date b_sdate = conts.getB_sdate();
+    Date b_edate = conts.getB_edate();
 %> 
-
+ 
     <div id="wrap">
         <header class="header">
             <div class="headerConts">
@@ -63,7 +64,7 @@
                             <div class="float:left;">
                                 <div class="category">
                                     <span class="c-blue"><%=b_keyword%></span>
-                                    <%=b_seq%>
+                                    
                                 </div>
                                 <h2 class="title"><%=b_title%></h2>
                             </div>   
@@ -116,8 +117,13 @@
                         <div class="btn_area2">
                             <a href="/board" class="basic_btn03 btn_sky_bg">목록</a>
                             
+                            <script>
+                            var b_seq = <%=b_seq %> // 게시글 번호 넘기기용
+                            </script>
+                            
                             <!-- !!!!!!인성님 도와주세요!!!!!!!! 찜기능 어케 만드나요 ㅜ-->
-                            <a href="/mypage" id="myLink" class="ajaxConGetButton">스크랩</a>
+                            <a id="myLink" class="ajaxConGetButton">스크랩</a>
+                            
                             <a href="<%=b_url%>" target="_blank" class="basic_btn03 btn_sky_bg">출처 바로가기</a>
                         </div><!-- btn_area2 -->
                

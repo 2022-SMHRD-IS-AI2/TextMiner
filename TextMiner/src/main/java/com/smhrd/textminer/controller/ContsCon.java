@@ -25,25 +25,20 @@ public class ContsCon {
 	public String servletReqeust(HttpServletRequest httpRequest) throws IOException {
 		System.out.println("다 돌음1");
 		int b_seq = Integer.parseInt(httpRequest.getParameter("b_seq"));
-//		String b_keyword = httpRequest.getParameter("b_keyword").toString();
-//		String b_title = httpRequest.getParameter("b_title").toString();
-//		String b_region = httpRequest.getParameter("b_region").toString();
-//		String b_url = httpRequest.getParameter("b_url =").toString();
-//		String b_or = httpRequest.getParameter("b_or").toString();
-//		String b_sor = httpRequest.getParameter("b_sor").toString();
-//		String b_conts = httpRequest.getParameter("b_conts").toString();
-//		String b_date = httpRequest.getParameter("b_date").toString();
+
 		System.out.println(b_seq);
+		
 		contsDTO conts = new contsDTO();
 
-		ContsMapper.conts(b_seq);
+		conts = ContsMapper.conts(b_seq);
 		
 		
-
+		
 		HttpSession session = httpRequest.getSession();
+		
 		session.setAttribute("conts", conts);
 		
-		System.out.println(conts);
+		
 
 		return "conts";
 }

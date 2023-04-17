@@ -114,7 +114,7 @@
 							    <tr>
 							         <td><%=seq%></td>    
 							         <td class="ellipsis"><%=keyword %></td>
-							         <td><a><%=title %></a></td>
+							         <td><a href="/conts1?b_seq=<%=seq%>"><%=title %></a></td>
 							         <td><%=region %></td>
 							         <td><%=tSdate %></td>
                                      <td><%=tEdate %></td>

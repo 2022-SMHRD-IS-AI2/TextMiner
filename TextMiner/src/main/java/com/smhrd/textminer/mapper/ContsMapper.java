@@ -13,7 +13,7 @@ import com.smhrd.textminer.dto.contsDTO;
 @Component
 public interface ContsMapper {
 	@Select("SELECT * FROM board WHERE b_seq = #{b_seq}")
-	contsDTO conts(int contsDTO);
+	contsDTO conts(int b_seq);
 	
 	
 	
