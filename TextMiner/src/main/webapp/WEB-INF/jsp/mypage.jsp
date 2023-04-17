@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.textminer.dto.JoinDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,6 +16,18 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
   <link rel="stylesheet" href="css/mypage.css">   <!-- css 연결 위치 -->
   <script type="text/javascript" src="JS/del.js" defer></script>
+  
+  <%
+  JoinDTO dto = (JoinDTO)session.getAttribute("dto");
+  
+  String mb_id = dto.getMb_id();
+  %>
+  
+  
+  
+  
+  
+  
 
 </head>
 
@@ -64,6 +77,10 @@
                                 <th>삭제</th>
                             </tr>
                         </thead>
+                       
+                        
+                 
+                        
                         <tbody>
                             <tr>
                                 <td>1</td>

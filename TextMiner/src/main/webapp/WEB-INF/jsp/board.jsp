@@ -20,7 +20,7 @@
 </head>
 
 <body class="scroll">
-<<<<<<< HEAD
+
 	<div id="wrap">
 		<header class="header">
 			<div class="headerConts">
