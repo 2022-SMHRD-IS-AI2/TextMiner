@@ -177,6 +177,9 @@ a.button {
 .main_bottom {padding: 0 1rem 5rem; width: 100%; max-width: 1600px; margin: 0 auto; box-sizing: border-box;}
 .bottom_wrap{display: flex; justify-content: center; align-items: center; width: 100%; max-width: 1600px; font-size: 0; padding-bottom: 2rem; max-height: 500px; height: 100%;}
 
+/* 글이 길때 줄임표 표시기능 */
+/* p.ellipsis {max-width:10rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}  */
+
 .box {
   background-color: rgba(2, 103, 189, 0.08);
   border-radius: 10%;
@@ -196,6 +199,7 @@ a.button {
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Noto Sans KR', sans-serif;
+  text-overflow: ellipsis;
 }
 .txt_date {
   color: #666666;
@@ -211,6 +215,7 @@ a.button {
   font-weight: 500;
   font-family: 'Noto Sans KR', sans-serif;
   margin: .5rem 0;
+  max-width:10rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .mb00 {
   margin-bottom: 0;

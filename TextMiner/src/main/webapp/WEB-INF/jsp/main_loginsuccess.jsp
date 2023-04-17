@@ -95,9 +95,9 @@
                     <!--             <p class="txt_contents" id="contents1-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
                                 <p class="txt_contents" id="contents1-2">- 연간 5시간이내(대상자 구분없음)</p>
                                 <p class="txt_contents mb00" id="contents1-3">* 식당, 매점 주차장 근무자 등은 제외</p> -->
-                                <p class="txt_contents" id="contents1-1"> <%= conts %></p>
-                                <p class="txt_contents" id="contents1-2">- 연간 5시간이내(대상자 구분없음)</p>
-                                <p class="txt_contents mb00" id="contents1-3">* 식당, 매점 주차장 근무자 등은 제외</p>
+                                <p class="txt_contents" id="contents1-1">○ <%= conts %></p>
+                                <<!-- p class="txt_contents" id="contents1-2">- 연간 5시간이내(대상자 구분없음)</p>
+                                <p class="txt_contents mb00" id="contents1-3">* 식당, 매점 주차장 근무자 등은 제외</p> -->
                             </div>
                             
                             <%} %>
