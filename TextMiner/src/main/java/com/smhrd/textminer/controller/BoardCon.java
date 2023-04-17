@@ -36,11 +36,11 @@ public class BoardCon{
 	  }
 	  int limit = 10;
 	  int offset = (page-1)*limit;
+	  int totalCount = boardMapper.getBoardCount();
+	  int totalPage = (totalCount % limit ==0) ? totalCount / limit : totalCount / limit + 1; 
 	  
 	  List<BoardDTO> boardList = boardMapper.selectBoardList(offset, limit);
 	 
-	  int totalCount = boardMapper.getBoardCount();
-	  int totalPage = (totalCount % limit ==0) ? totalCount / limit : totalCount / limit + 1; 
 //      List<BoardDTO> boardList = boardMapper.selectBoardList();
       
 //      for(BoardDTO bdto : boardList) {
@@ -56,6 +56,8 @@ public class BoardCon{
       session.setAttribute("cnt", totalCount);
       session.setAttribute("currentPage", page);
       session.setAttribute("totalPage", totalPage);
+      session.setAttribute("limit", limit);
+      session.setAttribute("offset", offset);
       
       System.out.println("offset :" + offset +"\t limit : " + limit);
       System.out.println("게시물 10개 출력" + boardList);
