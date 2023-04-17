@@ -11,6 +11,8 @@
     
     <link rel="stylesheet" href="css/conts.css">
     <script type="text/javascript" src="JS/alert.js" defer></script>
+    <script type="text/javascript" src="JS/scrap.js" defer></script>
+    <script type="text/javascript" src="JS/jquery-3.6.4.min.js" defer></script>
 </head>
 <body class="scroll">
  <%  contsDTO conts = (contsDTO)session.getAttribute("conts");
@@ -91,6 +93,12 @@
                                 </li>
                             </ul>
                         </div><!-- view_cont -->
+                        
+                        
+                        
+                        
+                        
+                        
                         <div class="tag_list">
                             <ul class="tag_ul_list">
                                 <li><span>#<%=b_keyword%></span></li>
@@ -101,7 +109,7 @@
                             <a href="/board" class="basic_btn03 btn_sky_bg">목록</a>
                             
                             <!-- !!!!!!인성님 도와주세요!!!!!!!! 찜기능 어케 만드나요 ㅜ-->
-                            <a href="/mypage" id="myLink" class="basic_btn03 btn_sky_bg">스크랩</a>
+                            <a href="/mypage" id="myLink" class="ajaxConGetButton">스크랩</a>
                             <a href="<%=b_url%>" target="_blank" class="basic_btn03 btn_sky_bg">출처 바로가기</a>
                         </div><!-- btn_area2 -->
                

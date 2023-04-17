@@ -37,15 +37,21 @@ public class ContsCon {
 		
 		contsDTO conts = new contsDTO();
 		ContsMapper.conts(1);
-		
-		
+	
 		HttpSession session = httpRequest.getSession();
 		session.setAttribute("conts", conts);
 		
 		System.out.println("다 돌음2");
 
-
 		return "conts";
 }
+	
+	
+	
+	
+	
+	
+	
+	
 }	
 	

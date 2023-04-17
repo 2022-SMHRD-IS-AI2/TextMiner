@@ -14,4 +14,12 @@ import com.smhrd.textminer.dto.contsDTO;
 public interface ContsMapper {
 	@Select("SELECT * FROM board WHERE ${b_seq}")
 	contsDTO conts(int contsDTO);
+	
+	
+	
+	@Insert("insert into scrap(mb_id, b_seq) values('${mb_id}', ${b_seq})")
+	void scrap(String mb_id, int b_seq);
+	
 }
+
+
