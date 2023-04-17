@@ -20,7 +20,6 @@
 </head>
 
 <body class="scroll">
-<<<<<<< HEAD
 	<div id="wrap">
 		<header class="header">
 			<div class="headerConts">
@@ -98,9 +97,11 @@
 						    if(request.getParameter("page") != null) {
 						        currentPage = Integer.parseInt(request.getParameter("page"));
 						    }
-						    int limit = 10; // 한페이지당 보여줄 게시글 수 
-						    int offset = (currentPage - 1) * limit; //현재 페이지의 게시글 시작위치
-						    int totalPage = (cnt % limit == 0) ? cnt / limit : cnt / limit + 1;
+						    int limit = (int)sessions.getAttribute("limit"); // 한페이지당 보여줄 게시글 수 
+						    //int limit = (int)sessions.getAttribute("limit");
+						   	int offset = (int)sessions.getAttribute("offset");  //현재 페이지의 게시글 시작위치
+						    //int offset = (int)sessions.getAttribute("offset");
+						    int totalPage = (int)sessions.getAttribute("totalPage");
 							
 						    
 						    //List<BoardDTO> boardList = (List<BoardDTO>) session.getAttribute("list");
@@ -108,7 +109,7 @@
 					
 							<% 
 							// 게시물 내용 출력하는 코드
-							for(int i = offset; i < offset + limit && i < cnt; i++){
+							for(int i = 0; i < limit && i < list.size(); i++){
 								BoardDTO bdto = list.get(i);
 								
 								int seq = bdto.getB_seq();
@@ -130,7 +131,8 @@
 							<tr>
 								<td><%=seq%></td>
 								<td class="ellipsis"><%=keyword%></td>
-								<td><a href="boardview?seq=<%=list.get(i).getB_seq()%>"><%=title%></a></td>
+								<td><a href="/conts1?b_seq=<%=seq%>"><%=title %></a></td>
+								
 								<td><%=region%></td>
 								<td><%=tSdate%></td>
 								<td><%=tEdate%></td>
