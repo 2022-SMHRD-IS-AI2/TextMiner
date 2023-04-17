@@ -28,9 +28,9 @@ public class BoardCon{
    @RequestMapping("/board")
    public String BoardList(HttpServletRequest request) {
 	   
+	  // 페이지 관련 설정
 	  String pageParam = request.getParameter("page");
 	  int page =1; // 초기값 1설정
-	  
 	  if(pageParam != null) {
 		  page = Integer.parseInt(pageParam);
 	  }

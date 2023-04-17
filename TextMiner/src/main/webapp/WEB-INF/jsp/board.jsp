@@ -94,7 +94,8 @@
 							// 페이징 처리 관련 코드
 							HttpSession sessions = request.getSession();
 							List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
-						    int cnt = (int)sessions.getAttribute("cnt");
+						    
+							int cnt = (int)sessions.getAttribute("cnt");
 						    int currentPage = 1;
 						    if(request.getParameter("page") != null) {
 						        currentPage = Integer.parseInt(request.getParameter("page"));
@@ -112,6 +113,7 @@
 							<% 
 							// 게시물 내용 출력하는 코드
 							for(int i = 0; i < limit && i < list.size(); i++){
+								
 								BoardDTO bdto = list.get(i);
 								
 								int seq = bdto.getB_seq();

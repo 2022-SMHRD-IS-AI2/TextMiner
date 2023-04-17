@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.smhrd.textminer.dto.BoardDTO;
 import com.smhrd.textminer.dto.MainDTO;
-import com.smhrd.textminer.mapper.mainMapper;
+import com.smhrd.textminer.mapper.MainMapper;
 
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,14 +20,13 @@ import jakarta.servlet.http.HttpSession;
 public class MainCon {
 	
 	@Autowired
-	private mainMapper mainMapper;
+	private MainMapper mainMapper;
 	
 	@RequestMapping("/main_loginsuccess")
 	// @PostMapping("/")
 	public String servletReqeust(HttpServletRequest request) {
 		
-			List<MainDTO> MainList = mainMapper.selectMainList();
-			System.out.println("*");
+			System.out.println("/main_loginsuccess");
 			
 			// MainDTO mainDTO = new MainDTO();
 
@@ -41,8 +40,11 @@ public class MainCon {
 			// mainDTO.addAttribute("mainDTO", mainDTO);
 			
 			HttpSession session = request.getSession();
+			List<MainDTO> mainList = mainMapper.selectMainList();
 		      
-		    session.setAttribute("list", MainList);
+		    session.setAttribute("list", mainList);
+		    
+		    System.out.println(mainList);
 			
 			return "main_loginsuccess";
 			
