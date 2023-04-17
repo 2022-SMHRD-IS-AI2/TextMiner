@@ -20,32 +20,35 @@ public class ContsCon {
 	
 	@Autowired
 	ContsMapper ContsMapper;
-	HttpServletResponse response; 
 	
-	@RequestMapping("/conts")
+	@RequestMapping("/conts1")
 	public String servletReqeust(HttpServletRequest httpRequest) throws IOException {
 		System.out.println("다 돌음1");
-//		Integer b_seq = Integer.parseInt(httpRequest.getParameter("b_seq"));
-//		String b_keyword = httpRequest.getParameter("b_keyword").toString();
-//		String b_title = httpRequest.getParameter("b_title").toString();
-//		String b_region = httpRequest.getParameter("b_region").toString();
-//		String b_url = httpRequest.getParameter("b_url =").toString();
-//		String b_or = httpRequest.getParameter("b_or").toString();
-//		String b_sor = httpRequest.getParameter("b_sor").toString();
-//		String b_conts = httpRequest.getParameter("b_conts").toString();
-//		String b_date = httpRequest.getParameter("b_date").toString();
+		int b_seq = Integer.parseInt(httpRequest.getParameter("b_seq"));
+
+		System.out.println(b_seq);
 		
 		contsDTO conts = new contsDTO();
-		ContsMapper.conts(1);
+
+		conts = ContsMapper.conts(b_seq);
+		
 		
 		
 		HttpSession session = httpRequest.getSession();
+		
 		session.setAttribute("conts", conts);
 		
-		System.out.println("다 돌음2");
-
+		
 
 		return "conts";
 }
+	
+	
+	
+	
+	
+	
+	
+	
 }	
 	

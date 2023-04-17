@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/signin.css">
     <link rel="stylesheet" href="css/sign_modal.css">
     <link rel="stylesheet" href="css/sign_checkbox.css">
-	<!--  <script type="text/javascript" src="JS/hashtag_modal.js" defer></script>-->
+	<script type="text/javascript" src="JS/hashtag_modal.js" defer></script>
 </head>
 
 <body>
@@ -23,6 +23,7 @@
                         <a href="/">
                             <h1>match-up</h1>
                         </a>
+                        
                         <h2>Sign in</h2>
                         <ul class="top">
                             <li><input type="text" placeholder="아이디를 입력해주세요" name="mb_id" required maxlength="30"></li>
@@ -33,12 +34,12 @@
                             </li>
                             <li><input type="text" placeholder="기업 명 을 입력해주세요" name="mb_firm" required maxlength="30">
                             </li>
-                            <li><input type="text" placeholder="전화번호를 입력해주세요" name="mb_call" required maxlength="30"></li>
-                            <li>
-                                <p>원하는 해시태그를 등록해 보세요</p>
-                            </li>
                             
-                            <li><input type="checkbox" name = "keyword-button" id="keyword-button" value="해시태그 등록">해시태그 등록</input></li>
+                            <li><input type="text" placeholder="전화번호를 입력해주세요" name="mb_call" required maxlength="30"></li>
+                              <li>
+                                <p class="hash_p">원하는 해시태그를 등록해 보세요</p>
+                                <input type="checkbox" id="keyword-button" name="hash" value="해시태그 등록" >
+                            </li>
                             <li><input type="submit" value="SIGN IN"></li>
                         </ul>
                         <hr class="hr">

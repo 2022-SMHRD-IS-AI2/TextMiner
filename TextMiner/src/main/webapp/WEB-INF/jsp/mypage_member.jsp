@@ -92,6 +92,7 @@
                             </table>
                             <div class="btn">
                                 <input type="submit" value="정보수정">
+                                <input type="submit" value="회원탈퇴">
                                <a href="./main.html" class="btn_cancle">취소</a>
                             </div>
                         </form>

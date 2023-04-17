@@ -20,6 +20,7 @@
 </head>
 
 <body class="scroll">
+<<<<<<< HEAD
 	<div id="wrap">
 		<header class="header">
 			<div class="headerConts">
@@ -176,6 +177,7 @@
 						
 						
 						<!-- <div class="page-wrap">
+
                             <ul class="page-nation">
                                 <li><a href="/board/list?p=1">1</a></li>
                                 <li><a href="/board/list?p=2">2</a></li>
