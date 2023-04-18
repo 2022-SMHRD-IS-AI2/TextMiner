@@ -63,9 +63,9 @@ List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
 						<script type="text/javascript" src="../JS/board.js"></script>
 					</div>
 					<!-- selectBox -->
-					<form action="#">
+					<form action="/board">
 						<input class="search__input" type="text"
-							placeholder="검색어를 입력해주세요.">
+							placeholder="검색어를 입력해주세요." name = "search">
 					</form>
 				</div>
 				<!--keywordWrap-->
@@ -79,7 +79,7 @@ List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
 					String rankey = rankeys.get(k);
 						
 						%>
-						<li><a href=" <a href="board?keyword=<%=k%>"" value ="<%=rankey%>"><%=rankey%></a></li>
+						<li><a href=" <a href="/board?keyword=<%=k%>"" value ="<%=rankey%>"><%=rankey%></a></li>
 					<!-- 	<li><a href="#">제조업</a></li>
 						<li><a href="#">에너지</a></li>
 						<li><a href="#">블록체인</a></li> -->
