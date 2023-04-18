@@ -1,8 +1,12 @@
 package com.smhrd.textminer.controller;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
+import org.mariadb.jdbc.plugin.authentication.standard.ed25519.math.ed25519.Ed25519LittleEndianEncoding;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,20 +44,10 @@ public class BoardCon{
 	  int totalPage = (totalCount % limit ==0) ? totalCount / limit : totalCount / limit + 1; 
 	  
 	  List<BoardDTO> boardList = boardMapper.selectBoardList(offset, limit);
-	 
-//      List<BoardDTO> boardList = boardMapper.selectBoardList();
-      
-//      for(BoardDTO bdto : boardList) {
-//         System.out.println(bdto);
-//      }
-      
-      
-     // model.addAttribute("list", boardList); //value 값에 객체 지정 실시
       
       HttpSession session = request.getSession();
       
       session.setAttribute("list", boardList);
-      
       
       session.setAttribute("cnt", totalCount); // 전체 데이터 갯수
       session.setAttribute("currentPage", page); // 현재페이지
@@ -65,7 +59,18 @@ public class BoardCon{
       System.out.println("게시물 10개 출력" + boardList);
       System.out.println("총 게시물 수 구하기 "+ totalCount);
       System.out.println("현재 페이지"+ page);
-    
+     
+      // 키워드 리스트 생성
+	  List<String> keyList = new ArrayList<>(Arrays.asList("AI","창업지원","환경","메타버스","제조업","에너지","패션","농수산","시스템반도체","유통/물류","로봇","통신/보안","빅데이터","클라우드","광고/마케팅","스마트헬스케어","교육","예술/콘텐츠","모빌리티","뷰티","블록체인","핀테크","게임","헬스케어","바이오"));
+	  // 랜덤 수 뽑아내기 Collections의 shuffle 함수
+	  Collections.shuffle(keyList);
+	  List<String> randomKeys = keyList.subList(0, 5);
+	  System.out.println(randomKeys);
+	  session.setAttribute("ranKeys", randomKeys);
+	  
+	   
+      
+      
       return "board";
       
    }
@@ -73,60 +78,6 @@ public class BoardCon{
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-//   최신오류
-//   @RequestMapping("/board")
-//   public @ResponseBody List<BoardDTO> selectBoardList(){
-//      List<BoardDTO> list = boardMapper.selectBoardList();
-//      return list;
-//   
-      
-      
-      
-//   어려워 시도
-//   public String boardTest(Model model) {
-//      model.addAllAttributes("selectBoardAll",boardMapper.selectBoardAll());
-//      return "/board";
-//   }
-//   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-//   기존방법
-//   @Autowired
-//   BoardMapper boardMapper;
-//   HttpServletResponse response;
-//   
-//   @RequestMapping("/board")
-//   public String servletRequest(HttpServletRequest httpRequest) throws IOException{
-//      System.out.println("보드매퍼 오는지?");
-//      BoardDTO board = new BoardDTO();
-//      boardMapper.allBoard(board);
-//      
-//      
-//      HttpSession session = httpRequest.getSession();
-//      session.setAttribute("board", board);
-//      
-//      System.out.println("보드매퍼2 오는지?");
-//      
-//      return "board";
-      
-      
    }
    
    

@@ -22,7 +22,22 @@ public interface BoardMapper {
 	
 	@Select ("SELECT count(*) FROM board")
 	public int getBoardCount();
-	}
+	
+	
+	//키워드에 맞는 카테고리 불러오기
+	@Select ("SELECT * FROM board WHERE b_keyword Like '%{category}%'")
+	public List<BoardDTO> getPostListByCategory(String category);
+	
+	// 검색어가 제목 조회하기
+	@Select ("SELECT * FROM board WHERE b_title LIKE '%{}%'")
+	public List<BoardDTO> getKeywordBoard();
+	
+	// 검색어가 들어간 제목 또는 내용을 조회하기
+	@Select("SELECT * FROM board WHERE b_title LIKE '%파이썬%' OR b_content LIKE '%{}%'")
+	public List<BoardDTO> getSeachConts();
+	
+	
+}
 
 	
 		

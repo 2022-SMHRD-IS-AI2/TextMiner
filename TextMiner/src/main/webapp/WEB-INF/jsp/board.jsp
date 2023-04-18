@@ -18,7 +18,10 @@
 <link rel="stylesheet" href="css/board.css">
 
 </head>
-
+<%  
+HttpSession sessions = request.getSession(); 
+List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
+%>
 
 <body class="scroll">
 
@@ -27,15 +30,14 @@
 			<div class="headerConts">
 				<div class="header_left">
 					<ul class="item">
-						<li class="s_logo"><a href="/"><img
-								src="image/head_logo.png"></a></li>
+						<li class="s_logo"><a href="/"><img src="image/head_logo.png"></a></li>
 					</ul>
 				</div>
 				<div class="header_right">
 					<ul class="item">
-						<li><a href="board.html">지원사업 공고</a></li>
-						<li><a href="mypage.html">MY PAGE</a></li>
-						<li><a href="main.html">LOG OUT</a></li>
+						<li><a href="/board">지원사업 공고</a></li>
+						<li><a href="/mypage">MY PAGE</a></li>
+						<li><a href="logout">LOG OUT</a></li>
 					</ul>
 				</div>
 			</div>
@@ -54,9 +56,9 @@
 					<div class="selectBox click">
 						<button class="label">지원사업명</button>
 						<ul class="optionList">
-							<li class="optionItem"><a href="">지원사업명</a></li>
-							<li class="optionItem"><a href="">사업분야</a></li>
-							<li class="optionItem"><a href="">지자체</a></li>
+							<li class="optionItem"><a href="#">지원사업명</a></li>
+							<li class="optionItem"><a href="#">사업분야</a></li>
+							<li class="optionItem"><a href="#">지자체</a></li>
 						</ul>
 						<script type="text/javascript" src="../JS/board.js"></script>
 					</div>
@@ -69,10 +71,19 @@
 				<!--keywordWrap-->
 				<div class="tag_ul_list">
 					<ul class="tag_ul">
-						<li><a href="">금융</a></li>
-						<li><a href="">제조업</a></li>
-						<li><a href="">에너지</a></li>
-						<li><a href="">블록체인</a></li>
+					<% 
+					List<String> rankeys = (List<String>)session.getAttribute("ranKeys");
+					
+					for(int k = 0; k<3 ; k++){
+						
+					String rankey = rankeys.get(k);
+						
+						%>
+						<li><a href=" <a href="board?keyword=<%=k%>"" value ="<%=rankey%>"><%=rankey%></a></li>
+					<!-- 	<li><a href="#">제조업</a></li>
+						<li><a href="#">에너지</a></li>
+						<li><a href="#">블록체인</a></li> -->
+						<%} %>
 					</ul>
 				</div>
 				<!--tag_ul_list-->
@@ -91,9 +102,8 @@
 							</thead>
 							<tbody>
 							<%
-							// 페이징 처리 관련 코드
-							HttpSession sessions = request.getSession();
 							
+							// 페이징 처리 관련 코드
 						    
 							int cnt = (int)sessions.getAttribute("cnt");
 						    int currentPage = 1;
@@ -106,13 +116,11 @@
 						    //int offset = (int)sessions.getAttribute("offset");
 						    int totalPage = (int)sessions.getAttribute("totalPage");
 							
-						    
-						    //List<BoardDTO> boardList = (List<BoardDTO>) session.getAttribute("list");
 							%>
 					
 							<% 
 							// 게시물 내용 출력하는 코드
-							List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
+							
 							
 							for(int i = 0; i < limit && i < list.size(); i++){
 								
@@ -165,37 +173,7 @@
 					    
 						  </div>
 						</div>  
-						<%-- 
-						<div class="page-wrap">
-						<ul class="page-nation">
-							<% if (startPage > 10) { %>
-							<li><a href="?pageNum=<%=startPage-pageBlock%>">&lt;&lt;</a></li>
-							<% } %>
-							
-							<% for (int i = startPage; i <=endPage; i++) { %>
-								<% if( i == pageNum) { %>
-								 <li class="active"><a href="#!"><%=i%></a></li>
-								<% } else { %> 
-								<li><a href="?pageNum=<%=i%>"><%=i%></a></li>
-								<%} %>
-							<%} %>
-							
-							<% if (endPage < totalPage) { %>
-							<li><a href="?pageNum=<%=startPage+pageBlock%>">&gt;&gt;</a></li>
-   							 <% } %>	
-						</ul>
-						</div> --%>
 						
-						
-						<!-- <div class="page-wrap">
-
-                            <ul class="page-nation">
-                                <li><a href="/board/list?p=1">1</a></li>
-                                <li><a href="/board/list?p=2">2</a></li>
-                                <li><a href="/board/list?p=3">3</a></li>
-                          
-                            </ul>
-                        </div> -->
 					</div>
 					<!--board -->
 				</div>
