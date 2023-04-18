@@ -152,16 +152,19 @@
 						</table>
 						
 						<!--  페이지 번호 출력 -->
-						 </table>
 					    <br>
+					<div class="page-wrap">
+					    <div class="page-nation"> 
 					    <% for(int i = 1; i <= totalPage; i++) { %>
 					        <% if(i == currentPage) { %>
-					            [<%=i%>]
+					            <a href="board?page=<%=i%>"><%=i%></a>
 					        <% } else { %>
-					            <a href="board?page=<%=i%>">[<%=i%>]</a>
+					            <a href="board?page=<%=i%>"><%=i%></a>
 					        <% } %>
 					    <% } %>
-						
+					    
+						  </div>
+						</div>  
 						<%-- 
 						<div class="page-wrap">
 						<ul class="page-nation">

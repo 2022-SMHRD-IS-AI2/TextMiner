@@ -100,14 +100,14 @@ th {padding: 1rem; text-align: center; background-color: #fcfcfc; border-top: 1p
 td {padding: 19px 5px 20px; font-size: 0.875em; font-weight: 400; text-align: center; border-bottom: 1px solid #ddd; word-break: break-all;}
 a {text-decoration: none; color: #333;}
 a:hover {text-decoration: underline;}
-.page-nation li {list-style: none;}
+/* .page-nation li {list-style: none;} */
 /* 글이 길때 줄임표 표시기능 */
 td.ellipsis {max-width:10rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;} 
 
 /* 메인 - 페이지네이션*/
 .page-wrap {text-align: center; font-size: 0;}
 .page-nation {display: flex; justify-content: center; align-items: center; margin: 2.5rem;}
-.page-nation a {display: block; margin: 0 0.15rem; float: left;border: 1px solid #e6e6e6; width: 1.4rem; height: 1.4rem; line-height: 1.4rem; text-align: center; background-color: #fff;font-size: 13px; color: black;text-decoration: none;font-weight: bold;}
+.page-nation a {display: block; margin: 0 0.15rem; float: left;border: 1px solid #e6e6e6; width: 1.4rem; height: 1.4rem; line-height: 1.4rem; text-align: center; background-color: #fff;font-size: 13px; color:#555;text-decoration: none;font-weight: bold;}
 .page-nation a:hover {background-color: gray; color: white;}
 
 
