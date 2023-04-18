@@ -123,7 +123,7 @@
                                 <p class="txt_contents mb00" id="contents4-3">* 식당, 매점 주차장 근무자 등은 제외</p>
                             </div> -->
                         </div>
-                        <div class="bottom_wrap">
+                        <div class="bottom_wrap display_none">
                         
                         <%-- <% 
                          
