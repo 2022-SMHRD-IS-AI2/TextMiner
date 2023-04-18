@@ -65,11 +65,11 @@ public class UrlMappingCon {
 //		return "conts";
 //	}
 
-	@GetMapping("/mypage")
-	public String mypageView() {
-		System.out.println("마이페이지 출력");
-		return "mypage";
-	}
+//	@GetMapping("/mypage")
+//	public String mypageView() {
+//		System.out.println("마이페이지 출력");
+//		return "mypage";
+//	}
 	
 	
 	

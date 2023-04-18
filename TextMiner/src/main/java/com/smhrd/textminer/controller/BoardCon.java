@@ -53,11 +53,13 @@ public class BoardCon{
       HttpSession session = request.getSession();
       
       session.setAttribute("list", boardList);
-      session.setAttribute("cnt", totalCount);
-      session.setAttribute("currentPage", page);
-      session.setAttribute("totalPage", totalPage);
-      session.setAttribute("limit", limit);
-      session.setAttribute("offset", offset);
+      
+      
+      session.setAttribute("cnt", totalCount); // 전체 데이터 갯수
+      session.setAttribute("currentPage", page); // 현재페이지
+      session.setAttribute("totalPage", totalPage); // 전체 페이지 갯수
+      session.setAttribute("limit", limit); // 10 
+      session.setAttribute("offset", offset); // 페이지 수
       
       System.out.println("offset :" + offset +"\t limit : " + limit);
       System.out.println("게시물 10개 출력" + boardList);

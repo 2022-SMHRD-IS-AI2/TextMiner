@@ -47,7 +47,9 @@ document.getElementById("signup-form").addEventListener("submit", function (even
   event.preventDefault(); // 폼 기본 동작 방지
   console.log("asfasfassaf");
 
-  // 사용자 입력 데이터 수집
+
+
+ // 사용자 입력 데이터 수집
  //var username = document.getElementById("username").value;
   //var email = document.getElementById("email").value;
   //var keywords = [];
