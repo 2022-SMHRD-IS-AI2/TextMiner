@@ -77,7 +77,7 @@
                                 <tbody>
                                     <tr>
                                         <th >아이디</th>
-                                        <td class="top-td"><%=mb_id %></td>
+                                        <td class="top-td" name="idNb"><%=mb_id %></td>
                                     </tr>
                                     <tr>
                                         <th >
@@ -95,19 +95,19 @@
                                         <th>
                                             <label>휴대전화</label>
                                         </th>
-                                        <td><input type="text" placeholder="<%=mb_call %>" name="phonNb"></td>
+                                        <td><input type="text" value="<%=mb_call %>" placeholder = "수정하실 전화번호를 입력해주세요" name="phoneNb"></td>
                                     </tr>
                                     <tr>
                                         <th >
                                             <label>E-MAIL</label>
                                         </th>
-                                        <td><input type="text" placeholder="<%=mb_email %>" name="email"></td>
+                                        <td><input type="text" value="<%=mb_email %>" placeholder = "수정하실 이메일을 입력해주세요" name="emailNb"></td>
                                     </tr>
                                     <tr>
                                         <th class="bottom-td">
                                             <label>기업 명</label>
                                         </th>
-                                        <td class="bottom-td"><input type="text" placeholder="<%=mb_firm %>" name="EnterpriseNM"></td>
+                                        <td class="bottom-td"><input type="text" value="<%=mb_firm %>" placeholder = "수정하실 회사명을 입력해주세요" name="FirmNb"></td>
                                     </tr>
                                 </tbody>
                             </table>

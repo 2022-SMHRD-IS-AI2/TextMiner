@@ -196,8 +196,10 @@ ul{margin:0; padding: 0;}
   border-radius: 4rem;
   display: inline-block;
   box-sizing: border-box;
+  
 }
-.btn_sky_bg{ background-color: #37A2B5; color: #fff;}
+
+.btn_sky_bg{ background-color: #37A2B5; color: #fff; cursor:pointer;}
 
 
 

@@ -122,7 +122,7 @@
                             </script>
                             
                             <!-- !!!!!!인성님 도와주세요!!!!!!!! 찜기능 어케 만드나요 ㅜ-->
-                            <a id="myLink" class="ajaxConGetButton">스크랩</a>
+                            <a id="myLink" class="ajaxConGetButton basic_btn03 btn_sky_bg">스크랩</a>
                             
                             <a href="<%=b_url%>" target="_blank" class="basic_btn03 btn_sky_bg">출처 바로가기</a>
                         </div><!-- btn_area2 -->
