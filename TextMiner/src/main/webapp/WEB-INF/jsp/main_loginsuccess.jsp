@@ -76,7 +76,8 @@
                         	for (int i = 0; i <= 3; i++ ) {
                         	
                         	MainDTO dtotwo = list.get(rd.nextInt(50));
-                        
+                        	
+                        	int seq = dtotwo.getB_seq();
                         	String title = dtotwo.getB_title();
                         	Date sdate = dtotwo.getB_sdate();
 	                    	Date edate = dtotwo.getB_edate();
@@ -92,7 +93,7 @@
                         
                             <div class="box">
                                 <!-- <h4 class="txt_head" id="head1">2022년 국가 재난대비 지정장례식장 교육 안내</h4> -->
-                                <h4 class="txt_head" id="head1"> <%=title %> </h4>
+                                <h4 class="txt_head" id="head1"><a href="/conts1?b_seq=<%=seq%>"><%=title %></a></h4>
                                 <!-- <p class="txt_date" id="date1">2023.03.24~2023.04.27</p> -->
                                 <p class="txt_date" id="date1"> <%=sdate %> ~ <%= edate %></p>
                     <!--             <p class="txt_contents" id="contents1-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
@@ -142,6 +143,7 @@
                         	int randomIndex = rdone.nextInt(50) + 51;
                         	MainDTO dtotwo = list.get(randomIndex);
                         
+                        	int seq = dtotwo.getB_seq();
                         	String title = dtotwo.getB_title();
                         	Date sdate = dtotwo.getB_sdate();
 	                    	Date edate = dtotwo.getB_edate();
@@ -157,7 +159,7 @@
                         
                             <div class="box">
                                 <!-- <h4 class="txt_head" id="head1">2022년 국가 재난대비 지정장례식장 교육 안내</h4> -->
-                                <h4 class="txt_head" id="head1"> <%=title %> </h4>
+                                <h4 class="txt_head" id="head1"><a href="/conts1?b_seq=<%=seq%>"><%=title %></a></h4>
                                  <!-- <p class="txt_date" id="date1">2023.03.24~2023.04.27</p> -->
                                 <p class="txt_date" id="date1"> <%=sdate %> ~ <%= edate %></p>
                                 <!--             <p class="txt_contents" id="contents1-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
