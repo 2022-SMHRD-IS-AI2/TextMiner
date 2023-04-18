@@ -155,6 +155,7 @@
 					    <br>
 					<div class="page-wrap">
 					    <div class="page-nation"> 
+					    
 					    <% for(int i = 1; i <= totalPage; i++) { %>
 					        <% if(i == currentPage) { %>
 					            <a href="board?page=<%=i%>"><%=i%></a>

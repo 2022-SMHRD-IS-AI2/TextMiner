@@ -47,8 +47,8 @@
                         <a href="/lo_main"><img class="logo_img" src="../image/logo.png" /></a>
                         <p class="ment1">지원사업 공고 매칭 사이트</p>
                         <p class="ment2">나에게 맞는 지원사업 공고를 검색해 보세요!</p>
-                        <form action="#">
-                            <input class="search__input" type="text" placeholder="검색어를 입력해주세요.">
+                        <form action="/board">
+                            <input class="search__input" type="text" placeholder="검색어를 입력해주세요." name = "search">
                         </form>
                     </div>
                     <div class="main_right">

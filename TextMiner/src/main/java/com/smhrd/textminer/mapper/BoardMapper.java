@@ -22,10 +22,16 @@ public interface BoardMapper {
 	
 	@Select ("SELECT count(*) FROM board")
 	public int getBoardCount();
-	}
-
 	
-		
+	@Select("SELECT count(*) FROM board WHERE b_title LIKE '%${k_word}%'")
+	public int getsearchCount(String k_word);
+	
+	
+	
+	@Select("SELECT * FROM board WHERE b_title LIKE '%${k_word}%' ORDER BY b_seq DESC LIMIT #{offset}, 10 ")
+	public List<BoardDTO> search(String k_word, int offset);
+	
+}
 	
 //	 해당 게시글 번호에 맞는 게시글의 모든 요소를 검색
 //	@Select("SELECT * FROM board WHERE b_sqe=#{b_sqe}")

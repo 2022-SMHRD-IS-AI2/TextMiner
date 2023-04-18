@@ -179,7 +179,7 @@ int totalPage = mydto.getTotalpage();
 		<%
 		} else {
 		%>
-		<a href="board?page=<%=i%>">[<%=i%>]
+		<a href="mypage?page=<%=i%>">[<%=i%>]
 		</a>
 		<%
 		}
