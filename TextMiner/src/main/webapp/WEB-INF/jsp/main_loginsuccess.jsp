@@ -1,4 +1,5 @@
 
+<%@page import="java.util.Random"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="com.smhrd.textminer.dto.MainDTO"%>
@@ -69,9 +70,12 @@
                          List<MainDTO> list = (List<MainDTO>)session.getAttribute("list");%>
                          	
                         <% 
-                        	for (int i = 0; i <= 3; i++ ) {
                         
-                        	MainDTO dtotwo = list.get(i);
+                        	Random rd = new Random();
+                        
+                        	for (int i = 0; i <= 3; i++ ) {
+                        	
+                        	MainDTO dtotwo = list.get(rd.nextInt(50));
                         
                         	String title = dtotwo.getB_title();
                         	Date sdate = dtotwo.getB_sdate();
@@ -131,9 +135,12 @@
                          	
                         <% 
                         
-                        	for (int i = 4; i <= 7; i++ ) {
+                        	Random rdone = new Random();
                         
-                        	MainDTO dtotwo = list.get(i);
+                        	for (int i = 0; i <= 3; i++ ) {
+                        	
+                        	int randomIndex = rdone.nextInt(50) + 51;
+                        	MainDTO dtotwo = list.get(randomIndex);
                         
                         	String title = dtotwo.getB_title();
                         	Date sdate = dtotwo.getB_sdate();
