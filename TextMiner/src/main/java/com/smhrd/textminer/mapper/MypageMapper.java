@@ -2,6 +2,7 @@ package com.smhrd.textminer.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 
@@ -20,5 +21,11 @@ public interface MypageMapper {
 
 	@Select("SELECT count(*) FROM scrap where mb_id = #{mb_id}")
 	public int getmyCount(String mb_id);
+	
+	@Delete("DELETE FROM scrap WHERE b_seq = #{b_seq} AND mb_id = #{mb_id}")
+	public void mydel(int b_seq, String mb_id);
+	
 
 }
+
+

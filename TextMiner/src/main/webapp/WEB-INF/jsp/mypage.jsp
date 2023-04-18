@@ -131,7 +131,7 @@ int totalPage = mydto.getTotalpage();
 								
 								<td><%=region%></td>
 								<td><%=tSdate%> ~ <%=tEdate %></td>
-								<td><button type="button" class="btn_delete" value = "<%=seq %>">삭제</button></td>
+								<td><a type="button" class="btn_delete" href = "/mydel?seq=<%=seq %>">삭제</a></td>
 							</tr>
 							<%
 								}
