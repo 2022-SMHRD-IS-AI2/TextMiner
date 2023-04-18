@@ -112,7 +112,10 @@ td > a:hover{text-decoration: underline;}
     width: 10rem;
     height: 3.5rem;
     margin-right: 2rem;
-  }
+  } 
+  
+  
+  
   input[type="submit"]:hover {
     background-color: #3e73e6;
     color:#fff;

@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.textminer.dto.JoinDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -29,6 +30,11 @@
                 </div>
                 <div class="header_right">
                     <ul class="item">
+                     <%  JoinDTO dto = (JoinDTO)session.getAttribute("dto");
+                    	String mb_id = dto.getMb_id();   %>
+                    	
+                    	
+                    	<li><a href="/mypage"><%=mb_id%></a></li>
                         <li><a href="board.html">지원사업 공고</a></li>
                         <li><a href="mypage.html">MY PAGE</a></li>
                         <li><a href="main.html">LOG OUT</a></li>
@@ -51,9 +57,9 @@
                     </div><!-- topMenu -->
                     <div class="scrapTable">
                         <div class="menuName">
-                            <p>캘린더</p>
+                            <p>정보수정</p>
                         </div><!-- menuName-->
-                        <form action="#" method="post">
+                        <form action="/userCon" method="post">
                             <table>
                                 <colgroup>
                                     <col class="w_1">
@@ -69,6 +75,12 @@
                                             <label>이름</label>
                                         </th>
                                         <td>조연경</td>
+                                    </tr>
+                                     <tr>
+                                        <th>
+                                            <label>비밀번호</label>
+                                        </th>
+                                        <td><input type="text" placeholder=" 수정 하실 비밀번호를 입력해주세요" name="pwNb"></td>
                                     </tr>
                                     <tr>
                                         <th>
@@ -91,9 +103,9 @@
                                 </tbody>
                             </table>
                             <div class="btn">
-                                <input type="submit" value="정보수정">
-                                <input type="submit" value="회원탈퇴">
-                               <a href="./main.html" class="btn_cancle">취소</a>
+                                <input type="submit" name="submitType" value="정보수정">
+                                <input type= "submit" name="submitType" value="회원탈퇴">
+                               <a href=/mypage class="btn_cancle">취소</a>
                             </div>
                         </form>
                     </div><!-- scrapTable -->
