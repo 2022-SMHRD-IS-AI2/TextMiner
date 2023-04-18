@@ -10,7 +10,7 @@
 	
 	<script>
 		alert('회원가입에 성공하셨습니다 ! 로그인해주세요.')
-		location.href="/login";
+		location.href="/";
 	</script>
 
 </body>

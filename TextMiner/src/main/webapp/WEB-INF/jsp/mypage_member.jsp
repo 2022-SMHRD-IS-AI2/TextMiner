@@ -35,9 +35,9 @@
                     	
                     	
                     	<li><a href="/mypage"><%=mb_id%></a></li>
-                        <li><a href="board.html">지원사업 공고</a></li>
-                        <li><a href="mypage.html">MY PAGE</a></li>
-                        <li><a href="main.html">LOG OUT</a></li>
+                        <li><a href="/board">지원사업 공고</a></li>
+                        <li><a href="/mypage">MY PAGE</a></li>
+                        <li><a href="/main">LOG OUT</a></li>
                     </ul>
                 </div>
             </div><!-- headerConts -->
@@ -65,16 +65,25 @@
                                     <col class="w_1">
                                     <col class="w_2">
                                 </colgroup>
+                                <% 
+                                	mb_id = dto.getMb_id();
+                                	String mb_name = dto.getMb_name();
+                                	String mb_pw = dto.getMb_pw();
+                                	String mb_call = dto.getMb_call();
+                                	String mb_email = dto.getMb_email();
+                                	String mb_firm = dto.getMb_firm();
+                                %>
+                                
                                 <tbody>
                                     <tr>
                                         <th >아이디</th>
-                                        <td class="top-td">yg5057gmail@naver.com</td>
+                                        <td class="top-td"><%=mb_id %></td>
                                     </tr>
                                     <tr>
                                         <th >
                                             <label>이름</label>
                                         </th>
-                                        <td>조연경</td>
+                                        <td><%=mb_name %></td>
                                     </tr>
                                      <tr>
                                         <th>
@@ -86,19 +95,19 @@
                                         <th>
                                             <label>휴대전화</label>
                                         </th>
-                                        <td><input type="text" placeholder=" 수정 하실 전화번호를 입력해주세요" name="phonNb"></td>
+                                        <td><input type="text" placeholder="<%=mb_call %>" name="phonNb"></td>
                                     </tr>
                                     <tr>
                                         <th >
                                             <label>E-MAIL</label>
                                         </th>
-                                        <td><input type="text" placeholder="수정 하실 E-MAIL 을 입력해주세요" name="email"></td>
+                                        <td><input type="text" placeholder="<%=mb_email %>" name="email"></td>
                                     </tr>
                                     <tr>
                                         <th class="bottom-td">
                                             <label>기업 명</label>
                                         </th>
-                                        <td class="bottom-td"><input type="text" placeholder="수정 하실 기업 이름을 입력해주세요" name="EnterpriseNM"></td>
+                                        <td class="bottom-td"><input type="text" placeholder="<%=mb_firm %>" name="EnterpriseNM"></td>
                                     </tr>
                                 </tbody>
                             </table>
