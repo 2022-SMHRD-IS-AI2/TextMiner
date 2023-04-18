@@ -1,6 +1,7 @@
 package com.smhrd.textminer.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.smhrd.textminer.dto.JoinDTO;
 import com.smhrd.textminer.dto.LoginDTO;
+import com.smhrd.textminer.dto.MainDTO;
 import com.smhrd.textminer.mapper.JoinMapper;
 import com.smhrd.textminer.mapper.LoginMapper;
+import com.smhrd.textminer.mapper.MainMapper;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -21,10 +24,11 @@ public class LoginCon {
 
 	@Autowired
 	LoginMapper loginMapper;
+	MainMapper mainMapper;
 
 	HttpServletResponse response;
 
-	@PostMapping("/lo_main")
+	@PostMapping("/login")
 	public String servletReqeust(HttpServletRequest request) {
 
 		String mb_id = request.getParameter("mb_id");
@@ -39,14 +43,13 @@ public class LoginCon {
 		JoinDTO loginUser = loginMapper.selectMember(dto);
 
 		if (loginUser != null) {
-			System.out.println("로그인 성공 !");
+			System.out.println("로그인 성공 !!@#$");
 
 			HttpSession session = request.getSession();
 
-			
 			session.setAttribute("dto", loginUser);
 			
-			return "main_loginsuccess";
+			return "redirect:/main_loginsuccess";
 			
 		} else {
 

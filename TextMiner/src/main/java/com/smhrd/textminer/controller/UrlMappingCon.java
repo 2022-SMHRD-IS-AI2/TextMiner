@@ -37,7 +37,7 @@ public class UrlMappingCon {
 	}
 	
 
-	@RequestMapping("/login")
+	@GetMapping("/login")
 	public String loginView() {
 		System.out.println("로그인 페이지 출력");
 		return "login";

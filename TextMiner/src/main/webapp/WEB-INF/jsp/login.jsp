@@ -15,7 +15,7 @@
         <div class="loginPage">
             <div class="loginWrap">
                 <div class="leftWrap">
-                    <form action="/lo_main" method = "post">
+                    <form action="/login" method = "post">
                         <a href="/"><h1>match-up</h1></a>
                         <h2>Login</h2>
                         <ul class="top">

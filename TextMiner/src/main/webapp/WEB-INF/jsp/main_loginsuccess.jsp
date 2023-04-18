@@ -1,4 +1,10 @@
+
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="com.smhrd.textminer.dto.MainDTO"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.textminer.dto.JoinDTO"%>
+<%@page import="com.smhrd.textminer.mapper.MainMapper"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,6 +17,8 @@
 
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="JS/changeText.js" defer></script>
+    
+    
 </head>
 
 <body class="scroll">
@@ -20,10 +28,9 @@
                 <div class="header_right">
                     <ul class="item">
                     <%  JoinDTO dto = (JoinDTO)session.getAttribute("dto");
-                    
-                    	String mb_id = dto.getMb_id();
-                 
-                    %>
+                    	String mb_id = dto.getMb_id();   %>
+                    	
+                    	
                     <li><a href="/mypage"><%=mb_id%></a></li>
                         <li><a href="/board">지원사업 공고</a></li>
                         <li><a href="/mypage">MY PAGE</a></li>
@@ -56,14 +63,45 @@
                     </div>
                     <div class="main_bottom">
                         <div class="bottom_wrap">
+                        
+                         <% 
+                         
+                         List<MainDTO> list = (List<MainDTO>)session.getAttribute("list");%>
+                         	
+                        <% 
+                        	for (int i = 0; i <= 3; i++ ) {
+                        
+                        	MainDTO dtotwo = list.get(i);
+                        
+                        	String title = dtotwo.getB_title();
+                        	Date sdate = dtotwo.getB_sdate();
+	                    	Date edate = dtotwo.getB_edate();
+	                    	String conts = dtotwo.getB_conts();
+	                    	
+	                    	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	                    	Date transSdate = dtotwo.getB_sdate();
+	                    	String tSdate = dateFormat.format(transSdate);
+		                    Date transEdate = dtotwo.getB_edate();
+		                    String tEdate = dateFormat.format(transEdate);
+	                    	
+                        %>
+                        
                             <div class="box">
-                                <h4 class="txt_head" id="head1">2022년 국가 재난대비 지정장례식장 교육 안내</h4>
-                                <p class="txt_date" id="date1">2023.03.24~2023.04.27</p>
-                                <p class="txt_contents" id="contents1-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
+                                <!-- <h4 class="txt_head" id="head1">2022년 국가 재난대비 지정장례식장 교육 안내</h4> -->
+                                <h4 class="txt_head" id="head1"> <%=title %> </h4>
+                                <!-- <p class="txt_date" id="date1">2023.03.24~2023.04.27</p> -->
+                                <p class="txt_date" id="date1"> <%=sdate %> ~ <%= edate %></p>
+                    <!--             <p class="txt_contents" id="contents1-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
                                 <p class="txt_contents" id="contents1-2">- 연간 5시간이내(대상자 구분없음)</p>
-                                <p class="txt_contents mb00" id="contents1-3">* 식당, 매점 주차장 근무자 등은 제외</p>
+                                <p class="txt_contents mb00" id="contents1-3">* 식당, 매점 주차장 근무자 등은 제외</p> -->
+                                <p class="txt_contents" id="contents1-1">○ <%= conts %></p>
+                                <<!-- p class="txt_contents" id="contents1-2">- 연간 5시간이내(대상자 구분없음)</p>
+                                <p class="txt_contents mb00" id="contents1-3">* 식당, 매점 주차장 근무자 등은 제외</p> -->
                             </div>
-                            <div class="box">
+                            
+                            <%} %>
+                            
+<!--                             <div class="box">
                                 <h4 class="txt_head" id="head2">2022년 국가 재난대비 지정장례식장 교육 안내</h4>
                                 <p class="txt_date" id="date2">2023.03.24~2023.04.27</p>
                                 <p class="txt_contents" id="contents2-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
@@ -83,17 +121,46 @@
                                 <p class="txt_contents" id="contents4-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
                                 <p class="txt_contents" id="contents4-2">- 연간 5시간이내(대상자 구분없음)</p>
                                 <p class="txt_contents mb00" id="contents4-3">* 식당, 매점 주차장 근무자 등은 제외</p>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="bottom_wrap">
+                        
+                        <%-- <% 
+                         
+                         List<MainDTO> list = (List<MainDTO>)session.getAttribute("list");%> --%>
+                         	
+                        <% 
+                        
+                        	for (int i = 4; i <= 7; i++ ) {
+                        
+                        	MainDTO dtotwo = list.get(i);
+                        
+                        	String title = dtotwo.getB_title();
+                        	Date sdate = dtotwo.getB_sdate();
+	                    	Date edate = dtotwo.getB_edate();
+	                    	String conts = dtotwo.getB_conts();
+	                    	
+	                    	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	                    	Date transSdate = dtotwo.getB_sdate();
+	                    	String tSdate = dateFormat.format(transSdate);
+		                    Date transEdate = dtotwo.getB_edate();
+		                    String tEdate = dateFormat.format(transEdate);
+	                    	
+                        %>
+                        
                             <div class="box">
-                                <h4 class="txt_head" id="head5">2022년 국가 재난대비 지정장례식장 교육 안내</h4>
-                                <p class="txt_date" id="date5">2023.03.24~2023.04.27</p>
-                                <p class="txt_contents" id="contents5-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
-                                <p class="txt_contents" id="contents5-2">- 연간 5시간이내(대상자 구분없음)</p>
-                                <p class="txt_contents mb00" id="contents5-3">* 식당, 매점 주차장 근무자 등은 제외</p>
+                                <!-- <h4 class="txt_head" id="head1">2022년 국가 재난대비 지정장례식장 교육 안내</h4> -->
+                                <h4 class="txt_head" id="head1"> <%=title %> </h4>
+                                 <!-- <p class="txt_date" id="date1">2023.03.24~2023.04.27</p> -->
+                                <p class="txt_date" id="date1"> <%=sdate %> ~ <%= edate %></p>
+                                <!--             <p class="txt_contents" id="contents1-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
+                                <p class="txt_contents" id="contents1-2">- 연간 5시간이내(대상자 구분없음)</p>
+                                <p class="txt_contents mb00" id="contents1-3">* 식당, 매점 주차장 근무자 등은 제외</p> -->
+                                <p class="txt_contents" id="contents1-1">○ <%= conts %></p>
                             </div>
-                            <div class="box">
+                            
+                            <%} %>
+                            <!-- <div class="box">
                                 <h4 class="txt_head" id="head6">2022년 국가 재난대비 지정장례식장 교육 안내</h4>
                                 <p class="txt_date" id="date6">2023.03.24~2023.04.27</p>
                                 <p class="txt_contents" id="contents6-1">○ 교육대상 : 국가재난 대비 지정 장례시작 200개소, 약 1,100여명</p>
@@ -114,7 +181,7 @@
                                 <p class="txt_contents" id="contents8-2">- 연간 5시간이내(대상자 구분없음)</p>
                                 <p class="txt_contents mb00" id="contents8-3">* 식당, 매점 주차장 근무자 등은 제외</p>
                             </div>
-                        </div>
+                        </div> -->
                 </div><!-- main_bottomWrap -->
             </div> <!-- main -->
         </div><!-- mainWrap -->
