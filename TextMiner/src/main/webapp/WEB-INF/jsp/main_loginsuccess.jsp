@@ -38,7 +38,7 @@
 						
 						} else {
 							
-						 // 아무 코드도 작성하지 않음
+						 // 아무 코드도 작성하지 않음 -> 다음 코드로 바로 넘어가기 !
 							
 						}
 						%>
@@ -174,7 +174,7 @@
 
 							for (int i = 0; i <= 3; i++) {
 
-								int randomIndex = rdone.nextInt(50) + 51;
+								int randomIndex = rdone.nextInt(list.size() - 51) + 51;
 								MainDTO dtotwo = list.get(randomIndex);
 
 								int seq = dtotwo.getB_seq();
