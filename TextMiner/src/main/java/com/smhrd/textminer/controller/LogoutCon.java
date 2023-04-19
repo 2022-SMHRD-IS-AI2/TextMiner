@@ -17,7 +17,7 @@ public class LogoutCon {
 	
 		System.out.println("여기를거쳐서 나가긴하는거니?");	
 		
-		return "main"; // 메인페이지로 리다이렉트
+		return "main_loginsuccess"; // 메인페이지로 리다이렉트
 	}
 
 }

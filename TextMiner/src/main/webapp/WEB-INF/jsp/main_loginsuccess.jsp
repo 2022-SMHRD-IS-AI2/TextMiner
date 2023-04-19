@@ -29,15 +29,24 @@
 				<div class="header_right">
 					<ul class="item">
 						<%
-						JoinDTO dto = (JoinDTO) session.getAttribute("dto");
+						JoinDTO dto;
+						dto = (JoinDTO) session.getAttribute("dto");
 						String mb_id = dto.getMb_id();
 						%>
 
 
-						<li><a href="/mypage"><%=mb_id%></a></li>
 						<li><a href="/board">지원사업 공고</a></li>
-						<li><a href="/mypage">MY PAGE</a></li>
+						<%
+						if(dto == null)  {%>
+						<li><a href="/login">LOG IN</a></li>
+                        <li><a href="/signin">SIGN IN</a></li>
+						
+						<%} else if( dto != null ){ %>
+						
+                        
+                        <li><a href="/mypage">MY PAGE</a></li>
 						<li><a href="/">LOG OUT</a></li>
+						<%} %>							
 					</ul>
 				</div>
 			</div>
