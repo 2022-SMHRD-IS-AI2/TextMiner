@@ -31,21 +31,30 @@
 						<%
 						JoinDTO dto;
 						dto = (JoinDTO) session.getAttribute("dto");
+						
+						if(dto != null) {
+							
 						String mb_id = dto.getMb_id();
+						
+						} else {
+							
+						 // 아무 코드도 작성하지 않음
+							
+						}
 						%>
-
 
 						<li><a href="/board">지원사업 공고</a></li>
 						<%
 						if(dto == null)  {%>
+						
 						<li><a href="/login">LOG IN</a></li>
                         <li><a href="/signin">SIGN IN</a></li>
 						
 						<%} else if( dto != null ){ %>
-						
                         
                         <li><a href="/mypage">MY PAGE</a></li>
 						<li><a href="/">LOG OUT</a></li>
+						
 						<%} %>							
 					</ul>
 				</div>
@@ -57,7 +66,7 @@
 			<div class="main">
 				<div class="maintopWrap">
 					<div class="main_left">
-						<a href="/lo_main"><img class="logo_img"
+						<a href="main_loginsuccess"><img class="logo_img"
 							src="../image/logo.png" /></a>
 						<p class="ment1">지원사업 공고 매칭 사이트</p>
 						<p class="ment2">나에게 맞는 지원사업 공고를 검색해 보세요!</p>

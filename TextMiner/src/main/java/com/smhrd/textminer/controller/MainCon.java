@@ -52,7 +52,8 @@ public class MainCon {
 			 
 }
 	
-	@GetMapping("/") // 메인 페이지 관련
+	//@GetMapping("/") // 메인 페이지 관련
+	@RequestMapping("/")
 	public String servlepRequest(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
