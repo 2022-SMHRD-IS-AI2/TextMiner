@@ -46,15 +46,15 @@ public class BoardCon {
 		
 		List<BoardDTO> boardList;
 		if (search == null) {
-			if(keyword == null) {
+			if(keyword == null) { // 전체 보여주기 
 				totalCount = boardMapper.getBoardCount();
 				boardList = boardMapper.selectBoardList(offset, limit);
-			}else {
+			}else { // 키워드눌렀을때
 				totalCount = boardMapper.getkeywordCount(keyword);
-				boardList = boardMapper.getPostListByCategory(keyword, offset);
+				boardList = boardMapper.getPostListByCategories(keyword, offset);
 			}
 			
-		} else {
+		} else { //검색한버전
 			totalCount = boardMapper.getsearchCount(search);
 			boardList = boardMapper.search(search, offset);
 		}
@@ -75,14 +75,13 @@ public class BoardCon {
 		session.setAttribute("offset", offset); // 페이지 수
 
 		// 키워드 리스트 생성
-		List<String> keyList = new ArrayList<>(Arrays.asList("AI", "창업지원", "환경", "메타버스", "제조업", "에너지", "패션", "농수산",
-				"시스템반도체", "유통/물류", "로봇", "통신/보안", "빅데이터", "클라우드", "광고/마케팅", "스마트헬스케어", "교육", "예술/콘텐츠", "모빌리티", "뷰티",
-				"블록체인", "핀테크", "게임", "헬스케어", "바이오"));
-		// 랜덤 수 뽑아내기 Collections의 shuffle 함수
-		Collections.shuffle(keyList);
-		List<String> randomKeys = keyList.subList(0, 5);
-		System.out.println(randomKeys);
-		session.setAttribute("ranKeys", randomKeys);
+		List<String> keyList = new ArrayList<>(Arrays.asList("AI", "창업지원", "메타버스", "빅데이터", "클라우드"));
+		
+		//"제조업", "에너지", "패션", "농수산","시스템반도체", "유통/물류", "로봇", "통신/보안", "광고/마케팅", "스마트헬스케어", "교육", "예술/콘텐츠", "모빌리티", "뷰티","핀테크", "게임", "헬스케어", "바이오"
+		
+		List<String> Keys = keyList.subList(0, 5);
+		System.out.println(Keys);
+		session.setAttribute("Keys", Keys);
 
 		return "board";
 

@@ -73,13 +73,13 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 				<div class="tag_ul_list">
 					<ul class="tag_ul">
 						<%
-						List<String> rankeys = (List<String>) session.getAttribute("ranKeys");
+						List<String> Keys = (List<String>) session.getAttribute("Keys");
 
 						for (int k = 0; k < 5; k++) {
 
-							String rankey = rankeys.get(k);
+							String keys = Keys.get(k);
 						%>
-						<li><a href="/board?keyword=<%=rankey%>" value="<%=rankey%>"><%=rankey%></a></li>
+						<li><a href="/board?keyword=<%=keys%>" value="<%=keys%>"><%=keys%></a></li>
 						<!-- 	<li><a href="#">제조업</a></li>
 						<li><a href="#">에너지</a></li>
 						<li><a href="#">블록체인</a></li> -->

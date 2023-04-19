@@ -23,6 +23,9 @@ public interface BoardMapper {
 	// 키워드에 맞는 카테고리 불러오기
 	@Select("SELECT * FROM board WHERE b_keyword Like #{category} LIMIT #{offset}, 10")
 	public List<BoardDTO> getPostListByCategory(String category, int offset);
+	
+	@Select("SELECT * FROM board WHERE b_keyword Like '%${category}%' LIMIT #{offset}, 10")
+	public List<BoardDTO> getPostListByCategories(String category, int offset);
 
 //	@Select ("SELECT * FROM board WHERE b_title LIKE '%{}%'")
 //	public List<BoardDTO> getKeywordBoard();
