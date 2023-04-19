@@ -30,7 +30,8 @@ public class BoardCon {
 	public String BoardList(HttpServletRequest request) {
 
 		String search = request.getParameter("search");
-
+		String keyword = request.getParameter("keyword");
+		
 		// 페이지 관련 설정
 		String pageParam = request.getParameter("page");
 		int page = 1; // 초기값 1설정
@@ -41,23 +42,27 @@ public class BoardCon {
 		int offset = (page - 1) * limit;
 
 		int totalCount;
-
+		
+		
+		List<BoardDTO> boardList;
 		if (search == null) {
-			totalCount = boardMapper.getBoardCount();
+			if(keyword == null) {
+				totalCount = boardMapper.getBoardCount();
+				boardList = boardMapper.selectBoardList(offset, limit);
+			}else {
+				totalCount = boardMapper.getkeywordCount(keyword);
+				boardList = boardMapper.getPostListByCategory(keyword, offset);
+			}
+			
 		} else {
 			totalCount = boardMapper.getsearchCount(search);
+			boardList = boardMapper.search(search, offset);
 		}
 
 		int totalPage = (totalCount % limit == 0) ? totalCount / limit : totalCount / limit + 1;
-		List<BoardDTO> boardList;
+		
 
-		if (search == null) {
-			boardList = boardMapper.selectBoardList(offset, limit);
-
-		} else {
-			boardList = boardMapper.search(search, offset);
-
-		}
+		
 
 		HttpSession session = request.getSession();
 

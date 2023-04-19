@@ -18,9 +18,9 @@
 <link rel="stylesheet" href="css/board.css">
 
 </head>
-<%  
-HttpSession sessions = request.getSession(); 
-List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
+<%
+HttpSession sessions = request.getSession();
+List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 %>
 
 <body class="scroll">
@@ -30,7 +30,8 @@ List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
 			<div class="headerConts">
 				<div class="header_left">
 					<ul class="item">
-						<li class="s_logo"><a href="/"><img src="image/head_logo.png"></a></li>
+						<li class="s_logo"><a href="/"><img
+								src="image/head_logo.png"></a></li>
 					</ul>
 				</div>
 				<div class="header_right">
@@ -65,25 +66,26 @@ List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
 					<!-- selectBox -->
 					<form action="/board">
 						<input class="search__input" type="text"
-							placeholder="검색어를 입력해주세요." name = "search">
+							placeholder="검색어를 입력해주세요." name="search">
 					</form>
 				</div>
 				<!--keywordWrap-->
 				<div class="tag_ul_list">
 					<ul class="tag_ul">
-					<% 
-					List<String> rankeys = (List<String>)session.getAttribute("ranKeys");
-					
-					for(int k = 0; k<3 ; k++){
-						
-					String rankey = rankeys.get(k);
-						
+						<%
+						List<String> rankeys = (List<String>) session.getAttribute("ranKeys");
+
+						for (int k = 0; k < 5; k++) {
+
+							String rankey = rankeys.get(k);
 						%>
-						<li><a href=" <a href="/board?keyword=<%=k%>"" value ="<%=rankey%>"><%=rankey%></a></li>
-					<!-- 	<li><a href="#">제조업</a></li>
+						<li><a href="/board?keyword=<%=rankey%>" value="<%=rankey%>"><%=rankey%></a></li>
+						<!-- 	<li><a href="#">제조업</a></li>
 						<li><a href="#">에너지</a></li>
 						<li><a href="#">블록체인</a></li> -->
-						<%} %>
+						<%
+						}
+						%>
 					</ul>
 				</div>
 				<!--tag_ul_list-->
@@ -101,80 +103,85 @@ List<BoardDTO> list = (List<BoardDTO>)sessions.getAttribute("list");
 								</tr>
 							</thead>
 							<tbody>
-							<%
-							
-							// 페이징 처리 관련 코드
-						    
-							int cnt = (int)sessions.getAttribute("cnt");
-						    int currentPage = 1;
-						    if(request.getParameter("page") != null) {
-						        currentPage = Integer.parseInt(request.getParameter("page"));
-						    }
-						    int limit = (int)sessions.getAttribute("limit"); // 한페이지당 보여줄 게시글 수 
-						    //int limit = (int)sessions.getAttribute("limit");
-						   	int offset = (int)sessions.getAttribute("offset");  //현재 페이지의 게시글 시작위치
-						    //int offset = (int)sessions.getAttribute("offset");
-						    int totalPage = (int)sessions.getAttribute("totalPage");
-							
-							%>
-					
-							<% 
-							// 게시물 내용 출력하는 코드
-							
-							
-							for(int i = 0; i < limit && i < list.size(); i++){
-								
-								BoardDTO bdto = list.get(i);
-								
-								int seq = bdto.getB_seq();
-								String keyword = bdto.getB_keyword();
-								String title = bdto.getB_title();
-								String region = bdto.getB_region();
-								Date sdate = bdto.getB_sdate();
-								Date edate = bdto.getB_edate();
-								
-							
-							
-							// 데이터 날짜 폼 바꿔주는 코드
-							SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-							Date transSdate = bdto.getB_sdate();
-							String tSdate = dateFormat.format(transSdate);
-							Date transEdate = bdto.getB_edate();
-							String tEdate = dateFormat.format(transEdate);
-							%>
-							<tr>
-								<td><%=seq%></td>
-								<td class="ellipsis"><%=keyword%></td>
-								<td><a href="/conts1?b_seq=<%=seq%>"><%=title %></a></td>
-								
-								<td><%=region%></td>
-								<td><%=tSdate%></td>
-								<td><%=tEdate%></td>
-							</tr>
-							<%
+								<%
+								// 페이징 처리 관련 코드
+
+								int cnt = (int) sessions.getAttribute("cnt");
+								int currentPage = 1;
+								if (request.getParameter("page") != null) {
+									currentPage = Integer.parseInt(request.getParameter("page"));
 								}
-							%>
+								int limit = (int) sessions.getAttribute("limit"); // 한페이지당 보여줄 게시글 수 
+								//int limit = (int)sessions.getAttribute("limit");
+								int offset = (int) sessions.getAttribute("offset"); //현재 페이지의 게시글 시작위치
+								//int offset = (int)sessions.getAttribute("offset");
+								int totalPage = (int) sessions.getAttribute("totalPage");
+								%>
+
+								<%
+								// 게시물 내용 출력하는 코드
+
+								for (int i = 0; i < limit && i < list.size(); i++) {
+
+									BoardDTO bdto = list.get(i);
+
+									int seq = bdto.getB_seq();
+									String keyword = bdto.getB_keyword();
+									String title = bdto.getB_title();
+									String region = bdto.getB_region();
+									Date sdate = bdto.getB_sdate();
+									Date edate = bdto.getB_edate();
+
+									// 데이터 날짜 폼 바꿔주는 코드
+									SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+									Date transSdate = bdto.getB_sdate();
+									String tSdate = dateFormat.format(transSdate);
+									Date transEdate = bdto.getB_edate();
+									String tEdate = dateFormat.format(transEdate);
+								%>
+								<tr>
+									<td><%=seq%></td>
+									<td class="ellipsis"><%=keyword%></td>
+									<td><a href="/conts1?b_seq=<%=seq%>"><%=title%></a></td>
+
+									<td><%=region%></td>
+									<td><%=tSdate%></td>
+									<td><%=tEdate%></td>
+								</tr>
+								<%
+								}
+								%>
 
 
 							</tbody>
 						</table>
-						
+
 						<!--  페이지 번호 출력 -->
-					    <br>
-					<div class="page-wrap">
-					    <div class="page-nation"> 
-					    
-					    <% for(int i = 1; i <= totalPage; i++) { %>
-					        <% if(i == currentPage) { %>
-					            <a href="board?page=<%=i%>"><%=i%></a>
-					        <% } else { %>
-					            <a href="board?page=<%=i%>"><%=i%></a>
-					        <% } %>
-					    <% } %>
-					    
-						  </div>
-						</div>  
-						
+						<br>
+						<div class="page-wrap">
+							<div class="page-nation">
+
+								<%
+								for (int i = 1; i <= totalPage; i++) {
+								%>
+								<%
+								if (i == currentPage) {
+								%>
+								<a href="board?page=<%=i%>"><%=i%></a>
+								<%
+								} else {
+								%>
+								<a href="board?page=<%=i%>"><%=i%></a>
+								<%
+								}
+								%>
+								<%
+								}
+								%>
+
+							</div>
+						</div>
+
 					</div>
 					<!--board -->
 				</div>
