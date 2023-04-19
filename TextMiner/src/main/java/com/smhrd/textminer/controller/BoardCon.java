@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.smhrd.textminer.dto.BoardDTO;
+import com.smhrd.textminer.dto.JoinDTO;
 import com.smhrd.textminer.dto.myDTO;
 import com.smhrd.textminer.mapper.BoardMapper;
 
@@ -74,8 +75,16 @@ public class BoardCon {
 		session.setAttribute("limit", limit); // 10
 		session.setAttribute("offset", offset); // 페이지 수
 
+		JoinDTO jo = (JoinDTO)session.getAttribute("dto");
+		
+		
+		String k1 = jo.getMb_key1();
+		String k2 = jo.getMb_key2();
+		String k3 = jo.getMb_key3();
+		
+		
 		// 키워드 리스트 생성
-		List<String> keyList = new ArrayList<>(Arrays.asList("AI", "창업지원", "메타버스", "빅데이터", "클라우드"));
+		List<String> keyList = new ArrayList<>(Arrays.asList(k1, k2, k3, "빅데이터", "클라우드"));
 		
 		//"제조업", "에너지", "패션", "농수산","시스템반도체", "유통/물류", "로봇", "통신/보안", "광고/마케팅", "스마트헬스케어", "교육", "예술/콘텐츠", "모빌리티", "뷰티","핀테크", "게임", "헬스케어", "바이오"
 		

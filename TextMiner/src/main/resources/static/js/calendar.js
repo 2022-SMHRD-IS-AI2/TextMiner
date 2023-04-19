@@ -18,9 +18,25 @@ $(document).ready(function() {
 					start: start,
 					end: end
 				};
+				
+		$.ajax({
+            url: '/CalCon', // 서버의 API 엔드포인트 URL
+            type: 'POST', // POST 방식으로 요청
+            data: encodeURI(JSON.stringify(eventData)), // 선택한 날짜 정보를 JSON 형태로 보냄
+            contentType: 'application/json', // 요청의 Content-Type 설정
+            success: function(response) {
+                console.log('일정이 성공적으로 저장되었습니다.', response);
+            },
+            error: function(error) {
+                console.error('일정 저장에 실패하였습니다.', error);
+            }
+        });
+				
+				
 				calendar.fullCalendar('renderEvent', eventData, true); // 일정 렌더링
 			}
 			calendar.fullCalendar('unselect');
+			
 		},
 		editable: true,
 		eventDrop: function(event, delta, revertFunc) {
@@ -31,37 +47,15 @@ $(document).ready(function() {
 		},
 		eventClick: function(event, jsEvent, view) {
 			// 일정 클릭시
+
+			
 		}
-	});
-
-		 $.ajax({
-		        type:"GET", // 겟으로 해도됨
-		        url:url, // 서블릿 유알엘 매핑값
-		        dataType:"text", // 받아올때 데이터 타입
-		        data:{  // 보낼데이터 ()
-		            //name : $('#ajaxConName').val(),
-		            //age : $('#ajaxConAge').val(), 
-		            seq : b_seq
-		        },
-		        success : function(data){ // 성공했을때
-		           // alert('ajax GET 통신 성공');
-		            
-		            if(data == "성공"){
-						alert('scrap하셨습니다!');
-					}else{
-						alert('실패');
-					}
-					
-		            //var $div = $('<div></div>');
-		            //var text = document.createTextNode(data);
-		            //$div.append(data);
-		            //$div.appendTo($('#myDiv'))
-		        
-		        },
-		        error : function(request,status,error){ // 통신자체 실패했을때
-		            alert('code:'+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error); //에러 상태에 대한 세부사항 출력
-		            alert(e);
-		        }
-		    })
-
+	
+	})
+	
+	
+	
 });
+
+
+	

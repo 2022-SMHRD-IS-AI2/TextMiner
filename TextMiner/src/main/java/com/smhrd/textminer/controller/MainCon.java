@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.smhrd.textminer.dto.BoardDTO;
+import com.smhrd.textminer.dto.JoinDTO;
 import com.smhrd.textminer.dto.MainDTO;
 import com.smhrd.textminer.mapper.MainMapper;
 
@@ -41,7 +42,16 @@ public class MainCon {
 			// mainDTO.addAttribute("mainDTO", mainDTO);
 			
 			HttpSession session = request.getSession();
-			List<MainDTO> mainList = mainMapper.selectMainList();
+			
+			JoinDTO jo = (JoinDTO)session.getAttribute("dto");
+			
+			
+			String k1 = jo.getMb_key1();
+			String k2 = jo.getMb_key2();
+			String k3 = jo.getMb_key3();
+			String re = jo.getMb_region();
+			
+			List<MainDTO> mainList = mainMapper.selectMainList(k1, k2, k3, re);
 		      
 		    session.setAttribute("list", mainList);
 		    
