@@ -19,11 +19,11 @@ public class UrlMappingCon {
 
 	// @Autowired TestMapper TestMapper;
 
-	@GetMapping("/") // 메인 페이지 관련
-	public String root() {
-		System.out.println("메인페이지 출력");
-		return "main";
-	}
+//	@GetMapping("/") // 메인 페이지 관련
+//	public String root() {
+//		System.out.println("메인페이지 출력");
+//		return "main";
+//	}
 	/*
 	 * @GetMapping("/lo_main") // 로그인-메인페이지 public String loginroot() {
 	 * System.out.println("로그인메인페이지 출력"); return "main_loginsuccess"; }
