@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -50,6 +51,21 @@ public class MainCon {
 			
 			 
 }
+	
+	@GetMapping("/") // 메인 페이지 관련
+	public String servlepRequest(HttpServletRequest request) {
+		
+		HttpSession session = request.getSession();
+		List<MainDTO> mainList = mainMapper.selectMainList();
+	      
+	    session.setAttribute("list", mainList);
+	    
+	    System.out.println(mainList);
+	    
+		return "main";
+	}
+	
+	
 /*
  * public String confirmId(MainDTO mainDTO) {
  * 
