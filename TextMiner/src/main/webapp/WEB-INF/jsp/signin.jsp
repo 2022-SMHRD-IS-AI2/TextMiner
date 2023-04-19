@@ -90,6 +90,45 @@
                                         </label>
                                     </div>
                                 </div>
+                                <div class="keywordform1">
+                                    <div class="form-element">
+                                        <input type="checkbox" name="keyword" value="제조업" id="keyword1-1">
+                                        <label for="keyword1-1">
+                                            <div class="title">제조업</div>
+                                        </label>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="checkbox" name="keyword" value="에너지" id="keyword2-1">
+                                        <label for="keyword2-1">
+                                            <div class="title">에너지</div>
+                                        </label>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="checkbox" name="keyword" value="클라우드" id="keyword3-1">
+                                        <label for="keyword3-1">
+                                            <div class="title">클라우드</div>
+                                        </label>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="checkbox" name="keyword" value="통신/보안" id="keyword4-1">
+                                        <label for="keyword4-1">
+                                            <div class="title">통신/보안</div>
+                                        </label>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="checkbox" name="keyword" value="네트워크" id="keyword5-1">
+                                        <label for="keyword5-1">
+                                            <div class="title">네트워크</div>
+                                        </label>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="checkbox" name="keyword" value="금융" id="keyword6-1">
+                                        <label for="keyword6-1">
+                                            <div class="title">금융</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                
                                 <p>지역별 해시태그 (1개 선택)</p>
                                 <div class="keywordform2">
                                     <div class="form-element">
@@ -199,7 +238,7 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>
+                            </div><!-- keywordformWrap -->
                             <button class="confirm" type="submit">선택완료</button>
                         </form>
                     </div>

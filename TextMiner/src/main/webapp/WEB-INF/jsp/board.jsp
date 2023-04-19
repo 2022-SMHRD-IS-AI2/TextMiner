@@ -1,4 +1,5 @@
 
+<%@page import="com.smhrd.textminer.dto.JoinDTO"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.List"%>
@@ -30,15 +31,31 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 			<div class="headerConts">
 				<div class="header_left">
 					<ul class="item">
-						<li class="s_logo"><a href="/"><img
+						<li class="s_logo"><a href="main_loginsuccess"><img
 								src="image/head_logo.png"></a></li>
 					</ul>
 				</div>
 				<div class="header_right">
 					<ul class="item">
 						<li><a href="/board">지원사업 공고</a></li>
-						<li><a href="/mypage">MY PAGE</a></li>
-						<li><a href="logout">LOG OUT</a></li>
+						
+						<%
+						
+						JoinDTO dto;
+						dto = (JoinDTO) session.getAttribute("dto"); 
+						// String mb_id = dto.getMb_id();
+						
+						 if(dto == null)  {%>
+						
+						<li><a href="/login">LOG IN</a></li>
+                        <li><a href="/signin">SIGN IN</a></li>
+						
+						<%} else if( dto != null ){ %>
+						
+                        <li><a href="/mypage">MY PAGE</a></li>
+						<li><a href="/">LOG OUT</a></li>
+						
+						<%} %>							
 					</ul>
 				</div>
 			</div>

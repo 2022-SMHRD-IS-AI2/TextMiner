@@ -21,14 +21,16 @@
             <div class="headerConts">
                 <div class="header_right">
                     <ul class="item">
-                    <%  JoinDTO dto = (JoinDTO)session.getAttribute("dto");
+                    <% JoinDTO dto;  
+                     dto = (JoinDTO)session.getAttribute("login");
                     	String mb_id = dto.getMb_id();   %>
                     	
                     	
-                    <li><a href="/mypage"><%=mb_id%></a></li>
                         <li><a href="/board">지원사업 공고</a></li>
+                        <%if () %>
                         <li><a href="/mypage">MY PAGE</a></li>
                         <li><a href="/">LOG OUT</a></li>
+                        
                     </ul>
                 </div>
             </div><!-- headerConts -->
