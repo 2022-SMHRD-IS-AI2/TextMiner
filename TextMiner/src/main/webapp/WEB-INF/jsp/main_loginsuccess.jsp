@@ -53,7 +53,7 @@
 						<%} else if( dto != null ){ %>
                         
                         <li><a href="/mypage">MY PAGE</a></li>
-						<li><a href="/">LOG OUT</a></li>
+						<li><a href="/logout">LOG OUT</a></li>
 						
 						<%} %>							
 					</ul>

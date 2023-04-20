@@ -53,7 +53,7 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 						<%} else if( dto != null ){ %>
 						
                         <li><a href="/mypage">MY PAGE</a></li>
-						<li><a href="/">LOG OUT</a></li>
+						<li><a href="/logout">LOG OUT</a></li>
 						
 						<%} %>							
 					</ul>
@@ -87,8 +87,18 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 					</form>
 				</div>
 				<!--keywordWrap-->
-				<div class="tag_ul_list">
-					<ul class="tag_ul">
+				
+				 <% if(dto == null)  {%>
+					 	<div class="tag_ul_list">
+							<ul class="tag_ul">
+							<li><a href="/login">기능 이용을 원하시면 로그인 해주세요</a></li>
+							</ul>
+						</div>
+						
+						<%} else if( dto != null ){ %>
+						
+                       <div class="tag_ul_list">
+						<ul class="tag_ul">
 						<%
 						List<String> Keys = (List<String>) session.getAttribute("Keys");
 
@@ -101,10 +111,11 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 						<li><a href="#">에너지</a></li>
 						<li><a href="#">블록체인</a></li> -->
 						<%
-						}
+						}}
 						%>
 					</ul>
-				</div>
+				</div>							
+				
 				<!--tag_ul_list-->
 				<div class="main">
 					<div class="board">
