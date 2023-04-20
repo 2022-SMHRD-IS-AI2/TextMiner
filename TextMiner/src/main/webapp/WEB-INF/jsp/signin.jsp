@@ -92,39 +92,39 @@
                                 </div>
                                 <div class="keywordform1">
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="제조업" id="keyword1-1">
+                                        <input type="checkbox" name="keyword" value="바이오" id="keyword1-1">
                                         <label for="keyword1-1">
-                                            <div class="title">제조업</div>
+                                            <div class="title">바이오</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="에너지" id="keyword2-1">
+                                        <input type="checkbox" name="keyword" value="뷰티" id="keyword2-1">
                                         <label for="keyword2-1">
-                                            <div class="title">에너지</div>
+                                            <div class="title">뷰티</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="클라우드" id="keyword3-1">
+                                        <input type="checkbox" name="keyword" value="시스템반도체" id="keyword3-1">
                                         <label for="keyword3-1">
-                                            <div class="title">클라우드</div>
+                                            <div class="title">시스템반도체</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="통신/보안" id="keyword4-1">
+                                        <input type="checkbox" name="keyword" value="농수산" id="keyword4-1">
                                         <label for="keyword4-1">
-                                            <div class="title">통신/보안</div>
+                                            <div class="title">농수산</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="네트워크" id="keyword5-1">
+                                        <input type="checkbox" name="keyword" value="패션" id="keyword5-1">
                                         <label for="keyword5-1">
-                                            <div class="title">네트워크</div>
+                                            <div class="title">패션</div>
                                         </label>
                                     </div>
                                     <div class="form-element">
-                                        <input type="checkbox" name="keyword" value="금융" id="keyword6-1">
+                                        <input type="checkbox" name="keyword" value="헬스케어" id="keyword6-1">
                                         <label for="keyword6-1">
-                                            <div class="title">금융</div>
+                                            <div class="title">헬스케어</div>
                                         </label>
                                     </div>
                                 </div>
