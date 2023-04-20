@@ -114,7 +114,7 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 						<%
 						List<String> Keys = (List<String>) session.getAttribute("Keys");
 
-						for (int k = 0; k < 5; k++) {
+						for (int k = 0; k < 3; k++) {
 
 							String keys = Keys.get(k);
 						%>
