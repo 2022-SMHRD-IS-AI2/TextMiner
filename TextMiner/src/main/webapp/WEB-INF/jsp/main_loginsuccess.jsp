@@ -101,7 +101,7 @@
 
 							for (int i = 0; i <= 3; i++) {
 								
-								MainDTO dtotwo = list.get(rd.nextInt(50));
+								MainDTO dtotwo = list.get(rd.nextInt(list.size()/2));
 
 								int seq = dtotwo.getB_seq();
 								String title = dtotwo.getB_title();
@@ -174,7 +174,7 @@
 
 							for (int i = 0; i <= 3; i++) {
 
-								int randomIndex = rdone.nextInt(list.size() - 51) + 51;
+								int randomIndex = rdone.nextInt(list.size() - list.size()/2) + list.size()/2;
 								MainDTO dtotwo = list.get(randomIndex);
 
 								int seq = dtotwo.getB_seq();
