@@ -19,7 +19,7 @@ link.addEventListener('click', function(event) {
 function AjaxConGet(){
 	
 	
-	alert(b_seq);
+	//alert(b_seq);
 	
     var url = "/AjaxCon";
     $.ajax({
@@ -35,7 +35,7 @@ function AjaxConGet(){
            // alert('ajax GET 통신 성공');
             
             if(data == "성공"){
-				alert('scrap하셨습니다!');
+				alert('스크랩 하셨습니다!');
 			}else{
 				alert('실패');
 			}
