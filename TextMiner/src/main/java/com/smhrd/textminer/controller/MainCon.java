@@ -52,7 +52,7 @@ public class MainCon {
 			String re = jo.getMb_region();
 			List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
 			
-		    if(mainList.size()<7) {
+		    if(mainList.size()<8) {
 		    	System.out.println(mainList.size());
 		    	mainList = mainMapper.selectMainList();
 		    }else {
