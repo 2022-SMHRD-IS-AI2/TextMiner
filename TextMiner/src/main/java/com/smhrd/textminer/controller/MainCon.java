@@ -50,9 +50,19 @@ public class MainCon {
 			String k2 = jo.getMb_key2();
 			String k3 = jo.getMb_key3();
 			String re = jo.getMb_region();
+			List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
 			
-			List<MainDTO> mainList = mainMapper.selectMainList(k1, k2, k3, re);
-		      
+		    if(mainList.size()<7) {
+		    	System.out.println(mainList.size());
+		    	mainList = mainMapper.selectMainList();
+		    }else {
+		    	
+		    	mainList = mainMapper.selectKeyList(k1, k2, k3, re);
+		    }
+			
+			
+			System.out.println(mainList.size());
+			
 		    session.setAttribute("list", mainList);
 		    
 		    System.out.println(mainList);
@@ -68,7 +78,7 @@ public class MainCon {
 		
 		HttpSession session = request.getSession();
 		List<MainDTO> mainList = mainMapper.selectMainList();
-	      
+	    
 	    session.setAttribute("list", mainList);
 	    
 	    System.out.println(mainList);

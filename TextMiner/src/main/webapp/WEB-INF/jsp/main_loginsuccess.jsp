@@ -100,7 +100,7 @@
 							Random rd = new Random();
 
 							for (int i = 0; i <= 3; i++) {
-
+								
 								MainDTO dtotwo = list.get(rd.nextInt(50));
 
 								int seq = dtotwo.getB_seq();

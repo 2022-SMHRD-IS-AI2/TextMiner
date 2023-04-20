@@ -127,7 +127,7 @@
                         	for (int i = 0; i <= 3; i++ ) {
                         	
                         	int randomIndex = rdone.nextInt(50) + 51;
-                        	MainDTO dtotwo = list.get(randomIndex);
+                        	MainDTO dtotwo = list.get(randomIndex); // ¿©±âÀÓ
                         
                         	int seq = dtotwo.getB_seq();
                         	String title = dtotwo.getB_title();
