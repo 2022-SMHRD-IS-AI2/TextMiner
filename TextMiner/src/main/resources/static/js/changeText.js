@@ -47,4 +47,13 @@ function changeText() {
     document.getElementById("contents8-1").innerHTML = "새로운 내용8";
     document.getElementById("contents8-2").innerHTML = "새로운 내용8";
     document.getElementById("contents8-3").innerHTML = "새로운 내용8";
+    
+    $("a.button btnFloat btnLightBlue").click(function(e){
+    event.preventDefault();
+   });
+    
+    
+    
+    
+    
 }

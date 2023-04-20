@@ -49,8 +49,8 @@
                 <div class="main_bottomWrap">
                     <div class="keyword_wrap">
                         <div class="keyword">
-                            <a href="#" class="button btnFloat btnLightBlue" onclick="changeText()">관심 사업분야</a>
-                            <a href="#" class="button btnFloat2 btnLightBlue" onclick="changeText()">관심 지자체</a>
+                          <!--   <a href="#" class="button btnFloat btnLightBlue" onclick="changeText()">관심 사업분야</a>
+                            <a href="#" class="button btnFloat2 btnLightBlue" onclick="changeText()">관심 지자체</a> -->
                         </div>
                     </div>
                     <div class="main_bottom scroll">
