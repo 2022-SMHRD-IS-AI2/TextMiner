@@ -202,7 +202,7 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 							<div class="page-nation">
 
 								<%
-								for (int i = 1; i <= totalPage; i++) {
+								for (int i = 1; i <= 10; i++) {
 								%>
 								<%
 								if (i == currentPage) {
@@ -218,8 +218,9 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 								<%
 								}
 								%>
-
+								▷
 							</div>
+							
 						</div>
 
 					</div>

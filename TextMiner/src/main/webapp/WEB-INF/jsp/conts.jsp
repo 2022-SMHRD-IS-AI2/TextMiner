@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.textminer.mapper.BoardMapper"%>
@@ -33,6 +34,12 @@
     String b_url = conts.getB_url();
     Date b_sdate = conts.getB_sdate();
     Date b_edate = conts.getB_edate();
+    
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	Date transSdate =conts.getB_sdate();
+	String tb_sdate = dateFormat.format(transSdate);
+	Date transEdate = conts.getB_edate();
+	String tb_edate = dateFormat.format(transEdate);
 %> 
  
     <div id="wrap">
@@ -86,7 +93,7 @@
                                 </li>
                                 <li>
                                     <span class="s_title">신청기간</span>
-                                    <div class="txt"><%=b_sdate%> ~ <%=b_edate%></div>
+                                    <div class="txt"><%=tb_sdate%> ~ <%=tb_edate%></div>
                                 </li>
                                 <li>
                                     <span class="s_title">사업개요</span>
