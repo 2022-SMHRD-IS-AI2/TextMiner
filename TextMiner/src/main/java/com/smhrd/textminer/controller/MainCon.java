@@ -87,32 +87,44 @@ public class MainCon {
 
 	@GetMapping("/mymo")
 	public String mymo(HttpServletRequest request) {
-
 		HttpSession session = request.getSession();
+		
+		JoinDTO jo = (JoinDTO) session.getAttribute("dto");
+		
+		String k1 = jo.getMb_key1();
+		String k2 = jo.getMb_key2();
+		String k3 = jo.getMb_key3();
+		String re = jo.getMb_region();
 
-		//List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
-		List<MainDTO> mainList = mainMapper.selectMainList();
+		List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
+		
 
 		session.setAttribute("list", mainList);
 
 		System.out.println(mainList);
 
-		return "main";
+		return "main_loginsuccess";
 	}
 
 	@GetMapping("/myreg")
 	public String myreg(HttpServletRequest request) {
-
 		HttpSession session = request.getSession();
 		
-		//List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
-		List<MainDTO> mainList = mainMapper.selectMainList();
+		JoinDTO jo = (JoinDTO) session.getAttribute("dto");
+		
+		String k1 = jo.getMb_key1();
+		String k2 = jo.getMb_key2();
+		String k3 = jo.getMb_key3();
+		String re = jo.getMb_region();
+		
+		List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
+		
 
 		session.setAttribute("list", mainList);
 
 		System.out.println(mainList);
 
-		return "main";
+		return "main_loginsuccess";
 	}
 
 }

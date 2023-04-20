@@ -23,4 +23,16 @@ public interface MainMapper {
 		
 		@Select("SELECT * FROM board LIMIT 100")
 		public List<MainDTO> selectMainList();
+		
+		@Select("SELECT * FROM board WHERE (b_keyword = #{mb_key1} OR b_keyword = #{mb_key2} OR b_keyword = #{mb_key3})") //AND b_region = #{mb_region}")
+		public List<MainDTO> mymo(String mb_key1, String mb_key2, String mb_key3, String mb_region);
+		
+		@Select("SELECT * FROM board WHERE b_region = #{mb_region}")
+		public List<MainDTO> myreg(String mb_key1, String mb_key2, String mb_key3, String mb_region);
+		
+		
+		
+		
+		
+		
 }
