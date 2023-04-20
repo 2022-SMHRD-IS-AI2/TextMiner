@@ -20,81 +20,97 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MainCon {
-	
+
 	@Autowired
 	private MainMapper mainMapper;
-	
+
 	@RequestMapping("/main_loginsuccess")
 	// @PostMapping("/")
 	public String servletReqeust(HttpServletRequest request) {
-		
-			System.out.println("/main_loginsuccess");
-			
-			// MainDTO mainDTO = new MainDTO();
 
-			/*
-			 * mainDTO.setB_title(request.getParameter("b_title"));
-			 * mainDTO.setB_sdate(request.getParameter("b_sdate"));
-			 * mainDTO.setB_edate(request.getParameter("b_edate"));
-			 * mainDTO.setB_conts(request.getParameter("b_conts"));
-			 */
-			
-			// mainDTO.addAttribute("mainDTO", mainDTO);
-			
-			HttpSession session = request.getSession();
-			
-			JoinDTO jo = (JoinDTO)session.getAttribute("dto");
-			
-			
-			String k1 = jo.getMb_key1();
-			String k2 = jo.getMb_key2();
-			String k3 = jo.getMb_key3();
-			String re = jo.getMb_region();
-			List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
-			
-		    if(mainList.size()<8) {
-		    	System.out.println(mainList.size());
-		    	mainList = mainMapper.selectMainList();
-		    	
-		    	
-		    }else {
-		    	
-		    	mainList = mainMapper.selectKeyList(k1, k2, k3, re);
-		    }
-			
-			
-			System.out.println(mainList.size());
-			
-		    session.setAttribute("list", mainList);
-		    
-		    System.out.println(mainList);
-			
-			return "main_loginsuccess";
-			
-			 
-}
-	
-	//@GetMapping("/") // 메인 페이지 관련
-	@RequestMapping("/")
-	public String servlepRequest(HttpServletRequest request) {
-		
+		System.out.println("/main_loginsuccess");
+
+		// MainDTO mainDTO = new MainDTO();
+
+		/*
+		 * mainDTO.setB_title(request.getParameter("b_title"));
+		 * mainDTO.setB_sdate(request.getParameter("b_sdate"));
+		 * mainDTO.setB_edate(request.getParameter("b_edate"));
+		 * mainDTO.setB_conts(request.getParameter("b_conts"));
+		 */
+
+		// mainDTO.addAttribute("mainDTO", mainDTO);
+
 		HttpSession session = request.getSession();
-		
+
+		JoinDTO jo = (JoinDTO) session.getAttribute("dto");
+
+		String k1 = jo.getMb_key1();
+		String k2 = jo.getMb_key2();
+		String k3 = jo.getMb_key3();
+		String re = jo.getMb_region();
+		List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
+
+		if (mainList.size() < 8) {
+			System.out.println(mainList.size());
+			mainList = mainMapper.selectMainList();
+
+		} else {
+
+			mainList = mainMapper.selectKeyList(k1, k2, k3, re);
+		}
+
+		System.out.println(mainList.size());
+
+		session.setAttribute("list", mainList);
+
+		System.out.println(mainList);
+
+		return "main_loginsuccess";
+
+	}
+
+	// @GetMapping("/") // 메인 페이지 관련
+	@GetMapping("/")
+	public String servlepRequest(HttpServletRequest request) {
+
+		HttpSession session = request.getSession();
+
 		List<MainDTO> mainList = mainMapper.selectMainList();
-	    
-	    session.setAttribute("list", mainList);
-	    
-	    System.out.println(mainList);
-	    
+
+		session.setAttribute("list", mainList);
+
+		System.out.println(mainList);
+
 		return "main";
 	}
-	
-	
-/*
- * public String confirmId(MainDTO mainDTO) {
- * 
- * return "mainDTO/main";
- * 
- * }
- */
+
+	@GetMapping("/mymo")
+	public String mymo(HttpServletRequest request) {
+
+		HttpSession session = request.getSession();
+
+		List<MainDTO> mainList = mainMapper.selectMainList();
+
+		session.setAttribute("list", mainList);
+
+		System.out.println(mainList);
+
+		return "main";
+	}
+
+	@GetMapping("/myreg")
+	public String myreg(HttpServletRequest request) {
+
+		HttpSession session = request.getSession();
+
+		List<MainDTO> mainList = mainMapper.selectMainList();
+
+		session.setAttribute("list", mainList);
+
+		System.out.println(mainList);
+
+		return "main";
+	}
+
 }

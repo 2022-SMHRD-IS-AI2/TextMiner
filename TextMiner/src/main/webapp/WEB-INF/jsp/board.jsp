@@ -31,8 +31,10 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 			<div class="headerConts">
 				<div class="header_left">
 					<ul class="item">
-						<li class="s_logo"><a href="main_loginsuccess"><img
+					
+						<li class="s_logo"><a href="/"><img
 								src="image/head_logo.png"></a></li>
+								
 					</ul>
 				</div>
 				<div class="header_right">

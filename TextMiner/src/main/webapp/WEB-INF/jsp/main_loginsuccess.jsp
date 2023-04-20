@@ -83,8 +83,8 @@
 				<div class="main_bottomWrap">
 					<div class="keyword_wrap">
 						<div class="keyword">
-							<a href="#" class="button btnFloat btnLightBlue"
-								onclick="changeText()">관심 사업분야</a> <a href="#"
+							<a href="/mymo" class="button btnFloat btnLightBlue"
+								onclick="changeText()">관심 사업분야</a> <a href="/myreg"
 								class="button btnFloat2 btnLightBlue" onclick="changeText()">관심
 								지자체</a>
 						</div>
