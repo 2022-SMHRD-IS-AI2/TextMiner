@@ -90,6 +90,7 @@ public class MainCon {
 
 		HttpSession session = request.getSession();
 
+		//List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
 		List<MainDTO> mainList = mainMapper.selectMainList();
 
 		session.setAttribute("list", mainList);
@@ -103,7 +104,8 @@ public class MainCon {
 	public String myreg(HttpServletRequest request) {
 
 		HttpSession session = request.getSession();
-
+		
+		//List<MainDTO> mainList = mainMapper.selectKeyList(k1, k2, k3, re);
 		List<MainDTO> mainList = mainMapper.selectMainList();
 
 		session.setAttribute("list", mainList);
