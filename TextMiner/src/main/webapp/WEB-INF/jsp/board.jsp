@@ -31,8 +31,24 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 			<div class="headerConts">
 				<div class="header_left">
 					<ul class="item">
+					
+					<%
+					
+					JoinDTO dto;
+					dto = (JoinDTO) session.getAttribute("dto"); 
+					// String mb_id = dto.getMb_id();
+					
+					if(dto == null) { %>
+					
+						<li class="s_logo"><a href="/"><img
+								src="image/head_logo.png"></a></li>
+								
+					<%} else {%>
+					
 						<li class="s_logo"><a href="main_loginsuccess"><img
 								src="image/head_logo.png"></a></li>
+						
+					<%  } %>
 					</ul>
 				</div>
 				<div class="header_right">
@@ -40,10 +56,6 @@ List<BoardDTO> list = (List<BoardDTO>) sessions.getAttribute("list");
 						<li><a href="/board">지원사업 공고</a></li>
 						
 						<%
-						
-						JoinDTO dto;
-						dto = (JoinDTO) session.getAttribute("dto"); 
-						// String mb_id = dto.getMb_id();
 						
 						 if(dto == null)  {%>
 						
