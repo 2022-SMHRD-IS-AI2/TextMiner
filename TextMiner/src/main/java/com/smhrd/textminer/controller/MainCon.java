@@ -55,6 +55,8 @@ public class MainCon {
 		    if(mainList.size()<8) {
 		    	System.out.println(mainList.size());
 		    	mainList = mainMapper.selectMainList();
+		    	
+		    	
 		    }else {
 		    	
 		    	mainList = mainMapper.selectKeyList(k1, k2, k3, re);
@@ -77,6 +79,7 @@ public class MainCon {
 	public String servlepRequest(HttpServletRequest request) {
 		
 		HttpSession session = request.getSession();
+		
 		List<MainDTO> mainList = mainMapper.selectMainList();
 	    
 	    session.setAttribute("list", mainList);

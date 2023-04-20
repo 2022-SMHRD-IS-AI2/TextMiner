@@ -75,12 +75,26 @@ public class BoardCon {
 		session.setAttribute("limit", limit); // 10
 		session.setAttribute("offset", offset); // 페이지 수
 
+		
 		JoinDTO jo = (JoinDTO)session.getAttribute("dto");
+		String k1;
+		String k2;
+		String k3;
+		
+		if(jo == null) {
+			k1 = "AI";
+			k2 = "로봇";
+			k3 = "제조업";
+			
+		}else {
+			
+			k1 = jo.getMb_key1();
+			k2 = jo.getMb_key2();
+			k3 = jo.getMb_key3();
+		}
 		
 		
-		String k1 = jo.getMb_key1();
-		String k2 = jo.getMb_key2();
-		String k3 = jo.getMb_key3();
+		
 		
 		
 		// 키워드 리스트 생성
