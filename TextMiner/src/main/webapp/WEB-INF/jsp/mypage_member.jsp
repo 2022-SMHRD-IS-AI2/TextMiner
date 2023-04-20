@@ -36,7 +36,7 @@
                     	
                         <li><a href="/board">지원사업 공고</a></li>
                         <li><a href="/mypage">MY PAGE</a></li>
-                        <li><a href="/main">LOG OUT</a></li>
+                        <li><a href="/logout">LOG OUT</a></li>
                     </ul>
                 </div>
             </div><!-- headerConts -->
